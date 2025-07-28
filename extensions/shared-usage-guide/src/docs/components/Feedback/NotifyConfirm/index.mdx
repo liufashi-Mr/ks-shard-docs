@@ -1,0 +1,48 @@
+import Basic from './Basic';
+import WithType from './WithType';
+import WithCustomBtns from './WithCustomBtns';
+
+## NotifyConfirm
+
+NotifyConfirm 是一个通知确认对话框组件，用于显示确认信息和操作按钮。
+
+### Usage
+
+`NotifyConfirm`
+
+<DemoBlock
+  title="NotifyConfirm 基本用法"
+  description="展示 NotifyConfirm 组件的基本用法，包括确认对话框"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="NotifyConfirm 不同类型"
+  description="展示 NotifyConfirm 组件不同类型的用法"
+>
+  <WithType />
+</DemoBlock>
+
+<DemoBlock
+  title="NotifyConfirm 自定义按钮"
+  description="展示 NotifyConfirm 组件自定义按钮的用法"
+>
+  <WithCustomBtns />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| visible | 是否可见 | `boolean` | - |
+| width | 宽度 | `number \| string` | - |
+| type | 类型 | `string` | - |
+| title | 标题 | `string` | - |
+| content | 内容 | `ReactNode` | - |
+| btns | 自定义按钮 | `ReactNode` | - |
+| confirmText | 确认按钮文本 | `string` | - |
+| cancelText | 取消按钮文本 | `string` | - |
+| isSubmitting | 是否提交中 | `boolean` | - |
+| onConfirm | 确认回调 | `() => void` | - |
+| onCancel | 取消回调 | `() => void` | - | 

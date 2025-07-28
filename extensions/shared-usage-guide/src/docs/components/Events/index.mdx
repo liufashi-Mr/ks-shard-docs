@@ -1,0 +1,40 @@
+import Basic from './Basic';
+import WithTitle from './WithTitle';
+import DifferentModules from './DifferentModules';
+
+## Events
+
+Events 是一个事件展示组件，用于显示 Kubernetes 资源的事件信息。
+
+### Usage
+
+`Events`
+
+<DemoBlock
+  title="Events 基本用法"
+  description="展示 Events 组件的基本用法，包括事件列表"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="Events 带标题"
+  description="展示 Events 组件带标题的用法"
+>
+  <WithTitle />
+</DemoBlock>
+
+<DemoBlock
+  title="Events 不同模块"
+  description="展示 Events 组件不同模块的用法"
+>
+  <DifferentModules />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| detail | 资源详细信息 | `T` | - |
+| module | 模块名称 | `string` | - |
+| showTitle | 是否显示标题 | `boolean` | - | 

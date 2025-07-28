@@ -1,0 +1,42 @@
+import Basic from './Basic';
+import WithLoading from './WithLoading';
+import WithCustomWidth from './WithCustomWidth';
+
+## CreateWorkspacesModal
+
+CreateWorkspacesModal 是一个创建工作空间模态框组件，用于创建新的工作空间。
+
+### Usage
+
+`CreateWorkspacesModal`
+
+<DemoBlock
+  title="CreateWorkspacesModal 基本用法"
+  description="展示 CreateWorkspacesModal 组件的基本用法，包括工作空间创建"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="CreateWorkspacesModal 加载状态"
+  description="展示 CreateWorkspacesModal 组件加载状态的用法"
+>
+  <WithLoading />
+</DemoBlock>
+
+<DemoBlock
+  title="CreateWorkspacesModal 自定义宽度"
+  description="展示 CreateWorkspacesModal 组件自定义宽度的用法"
+>
+  <WithCustomWidth />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| visible | 是否可见 | `boolean` | - |
+| width | 模态框宽度 | `number` | - |
+| confirmLoading | 确认按钮加载状态 | `boolean` | - |
+| onOk | 确认回调 | `(data: WorkspaceFormValues) => void` | - |
+| onCancel | 取消回调 | `() => void` | - | 

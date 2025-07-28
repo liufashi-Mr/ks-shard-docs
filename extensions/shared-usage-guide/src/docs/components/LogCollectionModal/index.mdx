@@ -1,0 +1,43 @@
+import Basic from './Basic';
+import WithLoading from './WithLoading';
+import WithModalProps from './WithModalProps';
+
+## LogCollectionModal
+
+LogCollectionModal 是一个日志收集模态框组件，用于配置和管理日志收集功能。
+
+### Usage
+
+`LogCollectionModal`
+
+<DemoBlock
+  title="LogCollectionModal 基本用法"
+  description="展示 LogCollectionModal 组件的基本用法，包括日志收集配置"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="LogCollectionModal 加载状态"
+  description="展示 LogCollectionModal 组件加载状态的用法"
+>
+  <WithLoading />
+</DemoBlock>
+
+<DemoBlock
+  title="LogCollectionModal 模态框属性"
+  description="展示 LogCollectionModal 组件模态框属性的用法"
+>
+  <WithModalProps />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| visible | 是否可见 | `boolean` | - |
+| confirmLoading | 确认按钮加载状态 | `boolean` | - |
+| onOk | 确认回调 | `() => void` | - |
+| onCancel | 取消回调 | `() => void` | - |
+| enabled | 是否启用 | `boolean` | - |
+| modalProps | 模态框属性 | `ModalProps` | - | 

@@ -1,0 +1,39 @@
+import Basic from './Basic';
+import WithCheckbox from './WithCheckbox';
+import WithRadio from './WithRadio';
+
+## TableHead
+
+TableHead 是一个表格头部组件，用于显示表格的列标题和选择控件。
+
+### Usage
+
+`TableHead`
+
+<DemoBlock
+  title="TableHead 基本用法"
+  description="展示 TableHead 组件的基本用法，包括列标题"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="TableHead 复选框"
+  description="展示 TableHead 组件复选框的用法"
+>
+  <WithCheckbox />
+</DemoBlock>
+
+<DemoBlock
+  title="TableHead 单选框"
+  description="展示 TableHead 组件单选框的用法"
+>
+  <WithRadio />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| column | 列配置 | `HeaderGroup<T>` | - |
+| selectType | 选择类型 | `'checkbox' \| 'radio' \| boolean` | - | 

@@ -1,0 +1,39 @@
+import Basic from './Basic';
+import WithResource from './WithResource';
+import WithCustomTitle from './WithCustomTitle';
+
+## DeleteConfirm
+
+DeleteConfirm 是一个删除确认组件，用于在删除资源前进行确认。
+
+### Usage
+
+`DeleteConfirmContent`
+
+<DemoBlock title="DeleteConfirm 基本用法" description="展示 DeleteConfirm 组件的基本用法">
+  <Basic />
+</DemoBlock>
+
+<DemoBlock title="DeleteConfirm 带资源确认" description="展示 DeleteConfirm 组件带资源的用法">
+  <WithResource />
+</DemoBlock>
+
+<DemoBlock title="DeleteConfirm 自定义标题" description="展示 DeleteConfirm 组件自定义标题的用法">
+  <WithCustomTitle />
+</DemoBlock>
+
+### API
+
+| 参数           | 说明         | 类型                                 | 默认值 |
+| -------------- | ------------ | ------------------------------------ | ------ |
+| type           | 资源类型     | `string`                             | -      |
+| resource       | 要删除的资源 | `Resource`                           | -      |
+| deleteCluster  | 是否删除集群 | `boolean`                            | -      |
+| app            | 应用信息     | `any`                                | -      |
+| title          | 标题         | `ReactNode`                          | -      |
+| tip            | 提示信息     | `string`                             | -      |
+| desc           | 描述         | `ReactNode`                          | -      |
+| confirmLoading  | loading      | `boolean`                            | -      |
+| onOk           | 确认回调     | `(data: any[] \| undefined) => void` | -      |
+| onSuccess      | 成功回调     | `() => void`                         | -      |
+| onCancel       | 取消回调     | `() => void`                         | -      |

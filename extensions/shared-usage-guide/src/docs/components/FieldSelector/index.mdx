@@ -1,0 +1,44 @@
+import Basic from './Basic';
+import WithCustomItem from './WithCustomItem';
+import WithPlaceholder from './WithPlaceholder';
+
+## FieldSelector
+
+FieldSelector 是一个字段选择器组件，用于从列表中选择字段值。
+
+### Usage
+
+`FieldSelector`
+
+<DemoBlock
+  title="FieldSelector 基本用法"
+  description="展示 FieldSelector 组件的基本用法，包括字段选择"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="FieldSelector 自定义项"
+  description="展示 FieldSelector 组件自定义项的用法"
+>
+  <WithCustomItem />
+</DemoBlock>
+
+<DemoBlock
+  title="FieldSelector 占位符"
+  description="展示 FieldSelector 组件占位符的用法"
+>
+  <WithPlaceholder />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| value | 当前值 | `string` | - |
+| onChange | 变化回调 | `(value: string) => void` | - |
+| defaultValue | 默认值 | `string` | - |
+| Item | 项组件 | `ComponentType` | - |
+| list | 数据列表 | `T[]` | - |
+| renderPlaceholder | 渲染占位符 | `() => ReactNode` | - |
+| rowKey | 行键 | `string` | - | 

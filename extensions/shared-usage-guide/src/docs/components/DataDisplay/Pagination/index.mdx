@@ -1,0 +1,48 @@
+import Basic from './Basic';
+import WithCallbacks from './WithCallbacks';
+import CustomStyle from './CustomStyle';
+
+## Pagination
+
+Pagination 是一个分页组件，用于在大量数据中导航，支持页码跳转和页面大小设置。
+
+### Usage
+
+`Pagination`
+
+<DemoBlock
+  title="Pagination 基本用法"
+  description="展示 Pagination 组件的基本用法，包括页码显示和导航"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="Pagination 回调函数"
+  description="展示 Pagination 组件的回调函数用法"
+>
+  <WithCallbacks />
+</DemoBlock>
+
+<DemoBlock
+  title="Pagination 自定义样式"
+  description="展示 Pagination 组件的自定义样式用法"
+>
+  <CustomStyle />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| totalCount | 数据总数 | `number` | - |
+| page | 当前页码 | `number` | `1` |
+| pageSize | 每页显示条数 | `number` | - |
+| pageCount | 总页数 | `number` | - |
+| showTotal | 是否显示总数 | `boolean` | `true` |
+| onNextPage | 下一页回调 | `(page: number) => void` | - |
+| onPreviousPage | 上一页回调 | `(page: number) => void` | - |
+| onGotoPage | 跳转页面回调 | `(page: number) => void` | - |
+| className | 自定义类名 | `string` | - |
+| style | 自定义样式 | `CSSProperties` | - |
+| placement | 放置位置 | `any` | - | 

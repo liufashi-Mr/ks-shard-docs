@@ -1,0 +1,43 @@
+import Basic from './Basic';
+import WithTip from './WithTip';
+import WithEvents from './WithEvents';
+
+## StatusReason
+
+StatusReason 是一个状态原因组件，用于显示资源状态和失败原因，常用于 Pod 和容器状态展示。
+
+### Usage
+
+`StatusReason`
+
+<DemoBlock
+  title="StatusReason 基本用法"
+  description="展示 StatusReason 组件的基本用法，包括状态和原因显示"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="StatusReason 带提示"
+  description="展示 StatusReason 组件带提示信息的用法"
+>
+  <WithTip />
+</DemoBlock>
+
+<DemoBlock
+  title="StatusReason 事件查看"
+  description="展示 StatusReason 组件带事件查看功能的用法"
+>
+  <WithEvents />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| data | 状态数据 | `any` | - |
+| reason | 状态原因 | `string` | - |
+| status | 状态 | `string` | - |
+| type | 类型 | `string` | - |
+| hasTip | 是否显示提示 | `boolean` | - |
+| onShowEvents | 显示事件回调 | `() => void` | - | 

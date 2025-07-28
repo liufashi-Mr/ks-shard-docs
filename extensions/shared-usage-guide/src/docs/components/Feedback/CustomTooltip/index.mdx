@@ -1,0 +1,47 @@
+import Basic from './Basic';
+import WithAlert from './WithAlert';
+import WithCustomLabel from './WithCustomLabel';
+
+## CustomTooltip
+
+CustomTooltip 是一个自定义提示框组件，用于图表和监控数据的详细信息展示。
+
+### Usage
+
+`CustomTooltip`
+
+<DemoBlock
+  title="CustomTooltip 基本用法"
+  description="展示 CustomTooltip 组件的基本用法，包括数据展示"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="CustomTooltip 带告警"
+  description="展示 CustomTooltip 组件带告警信息的用法"
+>
+  <WithAlert />
+</DemoBlock>
+
+<DemoBlock
+  title="CustomTooltip 自定义标签"
+  description="展示 CustomTooltip 组件自定义标签的用法"
+>
+  <WithCustomLabel />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| renderLabel | 自定义标签渲染函数 | `(res: unknown) => {}` | - |
+| active | 是否激活 | `boolean` | - |
+| payload | 数据载荷 | `Record<string, any>[]` | - |
+| usageData | 使用数据 | `{ [x: string]: string \| number \| null }[]` | - |
+| totalData | 总数据 | `{ [x: string]: string \| number \| null }[]` | - |
+| tailText | 尾部文本 | `string` | - |
+| alert | 告警信息 | `Record<string, any>` | - |
+| isTranslate | 是否翻译 | `boolean` | - |
+| label | 标签 | `string` | - |
+| unit | 单位 | `string` | - | 

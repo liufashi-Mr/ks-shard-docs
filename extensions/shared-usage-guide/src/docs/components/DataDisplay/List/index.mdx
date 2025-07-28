@@ -1,0 +1,52 @@
+import Basic from './Basic';
+import WithOperations from './WithOperations';
+import WithDetails from './WithDetails';
+
+## List
+
+List 是一个列表组件，用于展示一组相关的数据项，支持图标、标题、描述、操作等功能。
+
+### 基本使用
+
+<DemoBlock title="List 基本用法" description="展示 List 组件的基本用法，包括列表项的基本信息展示">
+  <Basic />
+</DemoBlock>
+
+### 自定义操作
+
+<DemoBlock title="List 带操作" description="展示 List 组件带操作按钮的用法">
+  <WithOperations />
+</DemoBlock>
+
+### 自定义详情
+
+<DemoBlock title="List 详细信息" description="展示 List 组件带详细信息的用法">
+  <WithDetails />
+</DemoBlock>
+
+### API
+
+#### List 组件
+
+| 参数      | 说明       | 类型        | 默认值 |
+| --------- | ---------- | ----------- | ------ |
+| className | 自定义类名 | `string`    | -      |
+| children  | 子元素     | `ReactNode` | -      |
+
+#### ListItem 组件
+
+| 参数        | 说明       | 类型                  | 默认值 |
+| ----------- | ---------- | --------------------- | ------ |
+| icon        | 图标       | `string`              | -      |
+| image       | 图片       | `string`              | -      |
+| title       | 标题       | `string \| ReactNode` | -      |
+| status      | 状态       | `string \| ReactNode` | -      |
+| description | 描述       | `string \| ReactNode` | -      |
+| extras      | 额外信息   | `ReactNode`           | -      |
+| details     | 详细信息   | `ReactNode`           | -      |
+| operations  | 操作按钮   | `ReactNode`           | -      |
+| onDelete    | 删除回调   | `() => void`          | -      |
+| onEdit      | 编辑回调   | `() => void`          | -      |
+| onClick     | 点击回调   | `() => void`          | -      |
+| className   | 自定义类名 | `string`              | -      |
+| titleClass  | 标题类名   | `string`              | -      |

@@ -1,0 +1,47 @@
+import Basic from './Basic';
+import CustomRange from './CustomRange';
+import WithCallbacks from './WithCallbacks';
+
+## TimeSelector
+
+TimeSelector 是一个时间选择器组件，用于选择时间范围和刷新间隔，常用于监控和日志查看场景。
+
+### Usage
+
+`TimeSelector`
+
+<DemoBlock
+  title="TimeSelector 基本用法"
+  description="展示 TimeSelector 组件的基本用法，包括预设时间范围选择"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="TimeSelector 自定义范围"
+  description="展示 TimeSelector 组件自定义时间范围的用法"
+>
+  <CustomRange />
+</DemoBlock>
+
+<DemoBlock
+  title="TimeSelector 回调函数"
+  description="展示 TimeSelector 组件的回调函数用法"
+>
+  <WithCallbacks />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| arrowIcon | 箭头图标 | `ReactNode` | - |
+| dark | 深色主题 | `boolean` | `false` |
+| step | 刷新间隔 | `string` | - |
+| times | 时间倍数 | `number` | - |
+| renderCustom | 是否渲染自定义选项 | `boolean` | - |
+| showStep | 是否显示刷新间隔 | `boolean` | - |
+| onChange | 时间变化回调 | `(val: Omit<ValueType, 'lastTime'>) => void` | - |
+| onToggle | 切换回调 | `(toggled: boolean) => void` | - |
+| timeOps | 时间选项 | `string[]` | - |
+| zIndex | 层级 | `number` | - | 

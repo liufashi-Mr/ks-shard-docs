@@ -1,0 +1,42 @@
+import Basic from './Basic';
+import WithWorkspace from './WithWorkspace';
+import WithCallback from './WithCallback';
+
+## NamespaceSelector
+
+NamespaceSelector 是一个命名空间选择器组件，用于选择 Kubernetes 命名空间。
+
+### Usage
+
+`NamespaceSelector`
+
+<DemoBlock
+  title="NamespaceSelector 基本用法"
+  description="展示 NamespaceSelector 组件的基本用法，包括命名空间选择"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="NamespaceSelector 工作空间"
+  description="展示 NamespaceSelector 组件带工作空间的用法"
+>
+  <WithWorkspace />
+</DemoBlock>
+
+<DemoBlock
+  title="NamespaceSelector 回调函数"
+  description="展示 NamespaceSelector 组件回调函数的用法"
+>
+  <WithCallback />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| pageSize | 每页大小 | `number` | - |
+| cluster | 集群名称 | `string` | - |
+| workspace | 工作空间 | `string` | - |
+| value | 当前值 | `string` | - |
+| onChange | 变化回调 | `(name: string) => void` | - | 

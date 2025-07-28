@@ -1,0 +1,33 @@
+import Basic from './Basic';
+import WithCallback from './WithCallback';
+import Controlled from './Controlled';
+
+## CollapsedBtn
+
+CollapsedBtn 是一个折叠按钮组件，用于控制侧边栏的展开和收起状态。
+
+### Usage
+
+`CollapsedBtn`
+
+<DemoBlock
+  title="CollapsedBtn 基本用法"
+  description="展示 CollapsedBtn 组件的基本用法，包括折叠状态"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock title="CollapsedBtn 回调函数" description="展示 CollapsedBtn 组件回调函数的用法">
+  <WithCallback />
+</DemoBlock>
+
+<DemoBlock title="CollapsedBtn 受控模式" description="展示 CollapsedBtn 组件受控模式的用法">
+  <Controlled />
+</DemoBlock>
+
+### API
+
+| 参数             | 说明         | 类型                           | 默认值 |
+| ---------------- | ------------ | ------------------------------ | ------ |
+| collapsed        | 是否折叠     | `boolean`                      | -      |
+| onClickCollapsed | 点击折叠回调 | `(collapsed: boolean) => void` | -      |

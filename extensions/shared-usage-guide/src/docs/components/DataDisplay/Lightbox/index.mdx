@@ -1,0 +1,41 @@
+import Basic from './Basic';
+import WithImage from './WithImage';
+
+## Lightbox
+
+Lightbox 是一个图片查看器组件，支持图片放大、缩略图和导航功能，常用于图片预览和展示。
+
+### 基本使用
+
+<DemoBlock title="Lightbox 基本用法" description="展示 Lightbox 组件的基本用法，包括图片查看和导航">
+  <Basic />
+</DemoBlock>
+
+### 和 Image 组件的结合使用
+
+<DemoBlock title="Lightbox 自定义控制" description="展示 Lightbox 组件自定义控制选项的用法">
+  <WithImage />
+</DemoBlock>
+
+### API
+
+Lightbox 组件基于 [`yet-another-react-lightbox`](https://github.com/igordanchenko/yet-another-react-lightbox) 库，支持其所有配置选项。
+
+| 参数       | 说明                       | 类型                 | 默认值  |
+| ---------- | -------------------------- | -------------------- | ------- |
+| open       | 是否打开                   | `boolean`            | `false` |
+| close      | 关闭 Lightbox 的回调函数   | `Callback`           | -       |
+| index      | 起始幻灯片索引             | `number`             | `0`     |
+| slides     | Lightbox 中要显示的幻灯片  | `Slide[]`            | -       |
+| render     | 自定义渲染函数             | `Render`             | -       |
+| labels     | 自定义 UI 标签 / 翻译      | `Labels`             | -       |
+| plugins    | 启用的插件                 | `Plugin[]`           | -       |
+| toolbar    | 工具栏设置                 | `ToolbarSettings`    | -       |
+| carousel   | 轮播图设置                 | `CarouselSettings`   | -       |
+| animation  | 动画设置                   | `AnimationSettings`  | -       |
+| controller | 控制器设置                 | `ControllerSettings` | -       |
+| portal     | 传送门设置                 | `PortalSettings`     | -       |
+| noScroll   | NoScroll 模块设置          | `NoScrollSettings`   | -       |
+| on         | 生命周期回调               | `Callbacks`          | -       |
+| styles     | 自定义样式                 | `SlotStyles`         | -       |
+| className  | Lightbox 根元素的 CSS 类名 | `string`             | -       |

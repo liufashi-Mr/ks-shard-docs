@@ -1,0 +1,108 @@
+import Basic from './Basic';
+import WithActions from './WithActions';
+import WithCustomData from './WithCustomData';
+import WithFilterAndSort from './WithFilterAndSort';
+
+## DataTable
+
+DataTable 是一个功能强大的数据表格组件，支持排序、筛选、分页、批量操作等功能。
+
+### 基本使用
+
+<DemoBlock
+  title="DataTable 基本用法"
+  description="展示 DataTable 组件的基本用法，包括列定义、数据展示和分页"
+>
+  <Basic />
+</DemoBlock>
+### 过滤和排序
+
+<DemoBlock
+  title="支持过滤和排序"
+  description="通过 column 配置 filterOptions sortable 实现过滤和排序"
+>
+  <WithFilterAndSort />
+</DemoBlock>
+
+### 批量操作
+
+<DemoBlock
+  title="DataTable 批量操作"
+  description="展示 DataTable 组件的批量操作功能，包括行选择和批量操作按钮"
+>
+  <WithActions />
+</DemoBlock>
+
+### 数据处理
+
+DataTable 期望的数据结构为
+
+```ts
+interface IResponse<T> {
+  items: T[];
+  totalItems: number;
+}
+```
+
+当返回数据结构不一致的时候可以使用 `serverDataFormat` 处理数据。
+当请求数据结构不一致的时候可以使用 `transformRequestParams` 处理数据。
+当有一些数据是通过`item`中的数据计算得来的，或者`item`中没有的字段，可以通过`format`处理
+
+<DemoBlock title="自定义数据处理" description="通过 format 和 serverDataFormat 处理数据">
+  <WithCustomData />
+</DemoBlock>
+
+### API
+
+| 参数                   | 说明                         | 类型                                                                                                                                                                                   | 默认值                                          |
+| ---------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| className              | 自定义类名                   | `string`                                                                                                                                                                               | -                                               |
+| columns                | 表格列配置                   | `Column<T>[]`                                                                                                                                                                          | -                                               |
+| tableName              | 表格名称，用于状态存储       | `string`                                                                                                                                                                               | -                                               |
+| rowKey                 | 行数据的唯一标识字段         | `string`                                                                                                                                                                               | -                                               |
+| url                    | 表格数据接口地址             | `string`                                                                                                                                                                               | -                                               |
+| format                 | 处理url返回的items中的数据   | `(data: any) => T`                                                                                                                                                                     | `data => data as T`                             |
+| serverDataFormat       | 处理url返回的数据            | `(data: any) => {items: T[], totalItems: number}`                                                                                                                                      | -                                               |
+| transformRequestParams | 处理请求参数                 | `(params: RequestParams) => RequestParams`                                                                                                                                             | -                                               |
+| isLoading              | 加载状态                     | `boolean`                                                                                                                                                                              | `false`                                         |
+| showToolbar            | 是否显示工具栏               | `boolean`                                                                                                                                                                              | `true`                                          |
+| showFooter             | 是否显示底部                 | `boolean \| 'only-multi-page'`                                                                                                                                                         | `true`                                          |
+| selectType             | 选择类型                     | `'checkbox' \| 'radio' \| boolean`                                                                                                                                                     | `hasContent(batchActions) ? 'checkbox' : false` |
+| batchActions           | 批量操作按钮                 | `ReactNode`                                                                                                                                                                            | -                                               |
+| onSelect               | 选择回调                     | `(selectedRowIds: Record<string, boolean>, selectedFlatRows: T[]) => void`                                                                                                             | -                                               |
+| onPageChange           | 页码变化回调                 | `(pageIndex: number, pageSize?: number) => void`                                                                                                                                       | -                                               |
+| onChange               | 表格状态变化回调             | `(state: TableState<T>) => void`                                                                                                                                                       | -                                               |
+| manualSortBy           | 是否手动排序                 | `boolean`                                                                                                                                                                              | `true`                                          |
+| manualFilters          | 是否手动过滤                 | `boolean`                                                                                                                                                                              | `true`                                          |
+| hideFilters            | 是否隐藏过滤器               | `boolean`                                                                                                                                                                              | `false`                                         |
+| hideTableHead          | 是否隐藏表头                 | `boolean`                                                                                                                                                                              | `false`                                         |
+| simpleSearch           | 是否使用简单搜索             | `boolean`                                                                                                                                                                              | `false`                                         |
+| enableQueryString      | 是否启用qs 的 request params | `boolean`                                                                                                                                                                              | `false`                                         |
+| header                 | 自定义头部                   | `ReactNode`                                                                                                                                                                            | -                                               |
+| toolbarLeft            | 左侧工具栏                   | `ReactNode`                                                                                                                                                                            | -                                               |
+| toolbarRight           | 右侧工具栏                   | `ReactNode`                                                                                                                                                                            | -                                               |
+| placeholder            | 占位文本                     | `string`                                                                                                                                                                               | -                                               |
+| parameters             | 请求参数                     | `Record<string, any>`                                                                                                                                                                  | `{}`                                            |
+| disableRowSelect       | 禁用行选择                   | `(row?: Record<string, any>) => boolean`                                                                                                                                               | -                                               |
+| watchOptions           | WebSocket监听选项            | `Pick<UseWebSocketOptions<Record<string, any>, T>, 'enabled' \| 'url' \| 'module' \| 'isFederated' \| 'format' \| 'onAddedOrDeleted' \| 'onModified' \| 'onMessage' \| 'isMatchKind'>` | -                                               |
+| emptyOptions           | 空状态选项                   | `TableEmptyOptions`                                                                                                                                                                    | -                                               |
+| filteredEmptyOptions   | 过滤后空状态选项             | `TableFilteredEmptyOptions`                                                                                                                                                            | -                                               |
+| onFilterInputChange    | 过滤输入变化回调             | `(value: any) => void`                                                                                                                                                                 | -                                               |
+| onChangeData           | 数据变化回调                 | `(data: T[]) => void`                                                                                                                                                                  | -                                               |
+| onRefresh              | 刷新回调                     | `() => void`                                                                                                                                                                           | -                                               |
+| skeleton               | 骨架屏配置                   | `TableSkeletonProps`                                                                                                                                                                   | -                                               |
+| hideSettingMenu        | 是否隐藏设置菜单             | `boolean`                                                                                                                                                                              | `false`                                         |
+
+### Column 配置
+
+| 参数          | 说明           | 类型                                | 默认值  |
+| ------------- | -------------- | ----------------------------------- | ------- |
+| title         | 列标题         | `string \| ReactNode`               | -       |
+| field         | 数据字段名     | `string`                            | -       |
+| render        | 自定义渲染函数 | `(value: any, row: T) => ReactNode` | -       |
+| sortable      | 是否可排序     | `boolean`                           | `false` |
+| searchable    | 是否可搜索     | `boolean`                           | `false` |
+| filterOptions | 筛选选项       | `{label: string, key: any}[]`       | -       |
+| width         | 列宽度         | `number \| string`                  | -       |
+| hidden        | 是否隐藏       | `boolean`                           | `false` |
+| canHide       | 是否可隐藏     | `boolean`                           | `true`  |

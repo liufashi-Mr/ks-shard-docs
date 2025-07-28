@@ -1,0 +1,1021 @@
+# MarkdownToc 组件
+
+这是一个使用 styled-components 构建的 Markdown 目录组件，支持桌面端和移动端。
+
+## 功能特性
+
+- ✅ 自动检测页面中的 h2、h3、h4 标题
+- ✅ 平滑滚动到对应章节
+- ✅ 当前章节高亮显示
+- ✅ 响应式设计，支持移动端
+- ✅ 使用 styled-components 构建，样式隔离
+- ✅ 支持键盘导航
+
+## 使用方法
+
+### 基本使用
+
+```tsx
+import MarkdownToc from './components/Layout/MarkdownToc';
+
+function App() {
+  return (
+    <div>
+      <div className="markdown-content">
+        <h1>文档标题</h1>
+        <h2 id="section1">第一部分</h2>
+        <p>内容...</p>
+        <h3 id="subsection1">子章节</h3>
+        <p>内容...</p>
+      </div>
+      
+      <MarkdownToc />
+    </div>
+  );
+}
+```
+
+### 在布局中使用
+
+```tsx
+import React from 'react';
+import MarkdownToc from './MarkdownToc';
+import styled from 'styled-components';
+
+const LayoutContainer = styled.div`
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+`;
+
+const ContentArea = styled.div`
+  flex: 1;
+  min-width: 0;
+`;
+
+const SidebarArea = styled.div`
+  width: 300px;
+  flex-shrink: 0;
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    order: -1;
+  }
+`;
+
+const Layout = () => {
+  return (
+    <LayoutContainer>
+      <ContentArea>
+        <div className="markdown-content">
+          {/* 你的 Markdown 内容 */}
+        </div>
+      </ContentArea>
+      
+      <SidebarArea>
+        <MarkdownToc />
+      </SidebarArea>
+    </LayoutContainer>
+  );
+};
+```
+
+## 样式定制
+
+组件使用 styled-components 构建，你可以通过以下方式定制样式：
+
+### 1. 修改全局样式
+
+在 `styles.ts` 文件中修改 `GlobalStyles`：
+
+```tsx
+export const GlobalStyles = createGlobalStyle`
+  /* 你的全局样式 */
+  .markdown-content h1 {
+    font-size: 32px;
+    color: #333;
+  }
+`;
+```
+
+### 2. 修改组件样式
+
+你可以导入并扩展组件样式：
+
+```tsx
+import { TocContainer } from './styles';
+import styled from 'styled-components';
+
+const CustomTocContainer = styled(TocContainer)`
+  background: #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+`;
+```
+
+## 移动端支持
+
+组件自动支持移动端：
+
+- 在桌面端显示为侧边栏
+- 在移动端（< 900px）显示为浮动按钮
+- 点击按钮打开侧边抽屉式目录
+- 支持触摸手势关闭
+
+## 依赖
+
+- `styled-components`: 用于样式管理
+- `react`: React 框架
+- `@types/styled-components`: TypeScript 类型定义
+
+## 文件结构
+
+```
+MarkdownToc/
+├── index.tsx          # 主组件
+├── styles.ts          # styled-components 样式
+├── useHeadsObserver.ts # 标题观察 hook
+└── README.md          # 说明文档
+```
+
+## 注意事项
+
+1. 确保标题元素有 `id` 属性，组件会自动检测
+2. 内容需要包含在 `.markdown-content` 类中
+3. 组件会自动处理滚动偏移，避免被固定头部遮挡
+4. 移动端需要确保有足够的 z-index 层级 
+
+## 功能特性
+
+- ✅ 自动检测页面中的 h2、h3、h4 标题
+- ✅ 平滑滚动到对应章节
+- ✅ 当前章节高亮显示
+- ✅ 响应式设计，支持移动端
+- ✅ 使用 styled-components 构建，样式隔离
+- ✅ 支持键盘导航
+
+## 使用方法
+
+### 基本使用
+
+```tsx
+import MarkdownToc from './components/Layout/MarkdownToc';
+
+function App() {
+  return (
+    <div>
+      <div className="markdown-content">
+        <h1>文档标题</h1>
+        <h2 id="section1">第一部分</h2>
+        <p>内容...</p>
+        <h3 id="subsection1">子章节</h3>
+        <p>内容...</p>
+      </div>
+      
+      <MarkdownToc />
+    </div>
+  );
+}
+```
+
+### 在布局中使用
+
+```tsx
+import React from 'react';
+import MarkdownToc from './MarkdownToc';
+import styled from 'styled-components';
+
+const LayoutContainer = styled.div`
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+`;
+
+const ContentArea = styled.div`
+  flex: 1;
+  min-width: 0;
+`;
+
+const SidebarArea = styled.div`
+  width: 300px;
+  flex-shrink: 0;
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    order: -1;
+  }
+`;
+
+const Layout = () => {
+  return (
+    <LayoutContainer>
+      <ContentArea>
+        <div className="markdown-content">
+          {/* 你的 Markdown 内容 */}
+        </div>
+      </ContentArea>
+      
+      <SidebarArea>
+        <MarkdownToc />
+      </SidebarArea>
+    </LayoutContainer>
+  );
+};
+```
+
+## 样式定制
+
+组件使用 styled-components 构建，你可以通过以下方式定制样式：
+
+### 1. 修改全局样式
+
+在 `styles.ts` 文件中修改 `GlobalStyles`：
+
+```tsx
+export const GlobalStyles = createGlobalStyle`
+  /* 你的全局样式 */
+  .markdown-content h1 {
+    font-size: 32px;
+    color: #333;
+  }
+`;
+```
+
+### 2. 修改组件样式
+
+你可以导入并扩展组件样式：
+
+```tsx
+import { TocContainer } from './styles';
+import styled from 'styled-components';
+
+const CustomTocContainer = styled(TocContainer)`
+  background: #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+`;
+```
+
+## 移动端支持
+
+组件自动支持移动端：
+
+- 在桌面端显示为侧边栏
+- 在移动端（< 900px）显示为浮动按钮
+- 点击按钮打开侧边抽屉式目录
+- 支持触摸手势关闭
+
+## 依赖
+
+- `styled-components`: 用于样式管理
+- `react`: React 框架
+- `@types/styled-components`: TypeScript 类型定义
+
+## 文件结构
+
+```
+MarkdownToc/
+├── index.tsx          # 主组件
+├── styles.ts          # styled-components 样式
+├── useHeadsObserver.ts # 标题观察 hook
+└── README.md          # 说明文档
+```
+
+## 注意事项
+
+1. 确保标题元素有 `id` 属性，组件会自动检测
+2. 内容需要包含在 `.markdown-content` 类中
+3. 组件会自动处理滚动偏移，避免被固定头部遮挡
+4. 移动端需要确保有足够的 z-index 层级 
+
+## 功能特性
+
+- ✅ 自动检测页面中的 h2、h3、h4 标题
+- ✅ 平滑滚动到对应章节
+- ✅ 当前章节高亮显示
+- ✅ 响应式设计，支持移动端
+- ✅ 使用 styled-components 构建，样式隔离
+- ✅ 支持键盘导航
+
+## 使用方法
+
+### 基本使用
+
+```tsx
+import MarkdownToc from './components/Layout/MarkdownToc';
+
+function App() {
+  return (
+    <div>
+      <div className="markdown-content">
+        <h1>文档标题</h1>
+        <h2 id="section1">第一部分</h2>
+        <p>内容...</p>
+        <h3 id="subsection1">子章节</h3>
+        <p>内容...</p>
+      </div>
+      
+      <MarkdownToc />
+    </div>
+  );
+}
+```
+
+### 在布局中使用
+
+```tsx
+import React from 'react';
+import MarkdownToc from './MarkdownToc';
+import styled from 'styled-components';
+
+const LayoutContainer = styled.div`
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+`;
+
+const ContentArea = styled.div`
+  flex: 1;
+  min-width: 0;
+`;
+
+const SidebarArea = styled.div`
+  width: 300px;
+  flex-shrink: 0;
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    order: -1;
+  }
+`;
+
+const Layout = () => {
+  return (
+    <LayoutContainer>
+      <ContentArea>
+        <div className="markdown-content">
+          {/* 你的 Markdown 内容 */}
+        </div>
+      </ContentArea>
+      
+      <SidebarArea>
+        <MarkdownToc />
+      </SidebarArea>
+    </LayoutContainer>
+  );
+};
+```
+
+## 样式定制
+
+组件使用 styled-components 构建，你可以通过以下方式定制样式：
+
+### 1. 修改全局样式
+
+在 `styles.ts` 文件中修改 `GlobalStyles`：
+
+```tsx
+export const GlobalStyles = createGlobalStyle`
+  /* 你的全局样式 */
+  .markdown-content h1 {
+    font-size: 32px;
+    color: #333;
+  }
+`;
+```
+
+### 2. 修改组件样式
+
+你可以导入并扩展组件样式：
+
+```tsx
+import { TocContainer } from './styles';
+import styled from 'styled-components';
+
+const CustomTocContainer = styled(TocContainer)`
+  background: #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+`;
+```
+
+## 移动端支持
+
+组件自动支持移动端：
+
+- 在桌面端显示为侧边栏
+- 在移动端（< 900px）显示为浮动按钮
+- 点击按钮打开侧边抽屉式目录
+- 支持触摸手势关闭
+
+## 依赖
+
+- `styled-components`: 用于样式管理
+- `react`: React 框架
+- `@types/styled-components`: TypeScript 类型定义
+
+## 文件结构
+
+```
+MarkdownToc/
+├── index.tsx          # 主组件
+├── styles.ts          # styled-components 样式
+├── useHeadsObserver.ts # 标题观察 hook
+└── README.md          # 说明文档
+```
+
+## 注意事项
+
+1. 确保标题元素有 `id` 属性，组件会自动检测
+2. 内容需要包含在 `.markdown-content` 类中
+3. 组件会自动处理滚动偏移，避免被固定头部遮挡
+4. 移动端需要确保有足够的 z-index 层级 
+
+## 功能特性
+
+- ✅ 自动检测页面中的 h2、h3、h4 标题
+- ✅ 平滑滚动到对应章节
+- ✅ 当前章节高亮显示
+- ✅ 响应式设计，支持移动端
+- ✅ 使用 styled-components 构建，样式隔离
+- ✅ 支持键盘导航
+
+## 使用方法
+
+### 基本使用
+
+```tsx
+import MarkdownToc from './components/Layout/MarkdownToc';
+
+function App() {
+  return (
+    <div>
+      <div className="markdown-content">
+        <h1>文档标题</h1>
+        <h2 id="section1">第一部分</h2>
+        <p>内容...</p>
+        <h3 id="subsection1">子章节</h3>
+        <p>内容...</p>
+      </div>
+      
+      <MarkdownToc />
+    </div>
+  );
+}
+```
+
+### 在布局中使用
+
+```tsx
+import React from 'react';
+import MarkdownToc from './MarkdownToc';
+import styled from 'styled-components';
+
+const LayoutContainer = styled.div`
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+`;
+
+const ContentArea = styled.div`
+  flex: 1;
+  min-width: 0;
+`;
+
+const SidebarArea = styled.div`
+  width: 300px;
+  flex-shrink: 0;
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    order: -1;
+  }
+`;
+
+const Layout = () => {
+  return (
+    <LayoutContainer>
+      <ContentArea>
+        <div className="markdown-content">
+          {/* 你的 Markdown 内容 */}
+        </div>
+      </ContentArea>
+      
+      <SidebarArea>
+        <MarkdownToc />
+      </SidebarArea>
+    </LayoutContainer>
+  );
+};
+```
+
+## 样式定制
+
+组件使用 styled-components 构建，你可以通过以下方式定制样式：
+
+### 1. 修改全局样式
+
+在 `styles.ts` 文件中修改 `GlobalStyles`：
+
+```tsx
+export const GlobalStyles = createGlobalStyle`
+  /* 你的全局样式 */
+  .markdown-content h1 {
+    font-size: 32px;
+    color: #333;
+  }
+`;
+```
+
+### 2. 修改组件样式
+
+你可以导入并扩展组件样式：
+
+```tsx
+import { TocContainer } from './styles';
+import styled from 'styled-components';
+
+const CustomTocContainer = styled(TocContainer)`
+  background: #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+`;
+```
+
+## 移动端支持
+
+组件自动支持移动端：
+
+- 在桌面端显示为侧边栏
+- 在移动端（< 900px）显示为浮动按钮
+- 点击按钮打开侧边抽屉式目录
+- 支持触摸手势关闭
+
+## 依赖
+
+- `styled-components`: 用于样式管理
+- `react`: React 框架
+- `@types/styled-components`: TypeScript 类型定义
+
+## 文件结构
+
+```
+MarkdownToc/
+├── index.tsx          # 主组件
+├── styles.ts          # styled-components 样式
+├── useHeadsObserver.ts # 标题观察 hook
+└── README.md          # 说明文档
+```
+
+## 注意事项
+
+1. 确保标题元素有 `id` 属性，组件会自动检测
+2. 内容需要包含在 `.markdown-content` 类中
+3. 组件会自动处理滚动偏移，避免被固定头部遮挡
+4. 移动端需要确保有足够的 z-index 层级 
+
+
+## 功能特性
+
+- ✅ 自动检测页面中的 h2、h3、h4 标题
+- ✅ 平滑滚动到对应章节
+- ✅ 当前章节高亮显示
+- ✅ 响应式设计，支持移动端
+- ✅ 使用 styled-components 构建，样式隔离
+- ✅ 支持键盘导航
+
+## 使用方法
+
+### 基本使用
+
+```tsx
+import MarkdownToc from './components/Layout/MarkdownToc';
+
+function App() {
+  return (
+    <div>
+      <div className="markdown-content">
+        <h1>文档标题</h1>
+        <h2 id="section1">第一部分</h2>
+        <p>内容...</p>
+        <h3 id="subsection1">子章节</h3>
+        <p>内容...</p>
+      </div>
+      
+      <MarkdownToc />
+    </div>
+  );
+}
+```
+
+### 在布局中使用
+
+```tsx
+import React from 'react';
+import MarkdownToc from './MarkdownToc';
+import styled from 'styled-components';
+
+const LayoutContainer = styled.div`
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+`;
+
+const ContentArea = styled.div`
+  flex: 1;
+  min-width: 0;
+`;
+
+const SidebarArea = styled.div`
+  width: 300px;
+  flex-shrink: 0;
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    order: -1;
+  }
+`;
+
+const Layout = () => {
+  return (
+    <LayoutContainer>
+      <ContentArea>
+        <div className="markdown-content">
+          {/* 你的 Markdown 内容 */}
+        </div>
+      </ContentArea>
+      
+      <SidebarArea>
+        <MarkdownToc />
+      </SidebarArea>
+    </LayoutContainer>
+  );
+};
+```
+
+## 样式定制
+
+组件使用 styled-components 构建，你可以通过以下方式定制样式：
+
+### 1. 修改全局样式
+
+在 `styles.ts` 文件中修改 `GlobalStyles`：
+
+```tsx
+export const GlobalStyles = createGlobalStyle`
+  /* 你的全局样式 */
+  .markdown-content h1 {
+    font-size: 32px;
+    color: #333;
+  }
+`;
+```
+
+### 2. 修改组件样式
+
+你可以导入并扩展组件样式：
+
+```tsx
+import { TocContainer } from './styles';
+import styled from 'styled-components';
+
+const CustomTocContainer = styled(TocContainer)`
+  background: #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+`;
+```
+
+## 移动端支持
+
+组件自动支持移动端：
+
+- 在桌面端显示为侧边栏
+- 在移动端（< 900px）显示为浮动按钮
+- 点击按钮打开侧边抽屉式目录
+- 支持触摸手势关闭
+
+## 依赖
+
+- `styled-components`: 用于样式管理
+- `react`: React 框架
+- `@types/styled-components`: TypeScript 类型定义
+
+## 文件结构
+
+```
+MarkdownToc/
+├── index.tsx          # 主组件
+├── styles.ts          # styled-components 样式
+├── useHeadsObserver.ts # 标题观察 hook
+└── README.md          # 说明文档
+```
+
+## 注意事项
+
+1. 确保标题元素有 `id` 属性，组件会自动检测
+2. 内容需要包含在 `.markdown-content` 类中
+3. 组件会自动处理滚动偏移，避免被固定头部遮挡
+4. 移动端需要确保有足够的 z-index 层级 
+
+
+## 功能特性
+
+- ✅ 自动检测页面中的 h2、h3、h4 标题
+- ✅ 平滑滚动到对应章节
+- ✅ 当前章节高亮显示
+- ✅ 响应式设计，支持移动端
+- ✅ 使用 styled-components 构建，样式隔离
+- ✅ 支持键盘导航
+
+## 使用方法
+
+### 基本使用
+
+```tsx
+import MarkdownToc from './components/Layout/MarkdownToc';
+
+function App() {
+  return (
+    <div>
+      <div className="markdown-content">
+        <h1>文档标题</h1>
+        <h2 id="section1">第一部分</h2>
+        <p>内容...</p>
+        <h3 id="subsection1">子章节</h3>
+        <p>内容...</p>
+      </div>
+      
+      <MarkdownToc />
+    </div>
+  );
+}
+```
+
+### 在布局中使用
+
+```tsx
+import React from 'react';
+import MarkdownToc from './MarkdownToc';
+import styled from 'styled-components';
+
+const LayoutContainer = styled.div`
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+`;
+
+const ContentArea = styled.div`
+  flex: 1;
+  min-width: 0;
+`;
+
+const SidebarArea = styled.div`
+  width: 300px;
+  flex-shrink: 0;
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    order: -1;
+  }
+`;
+
+const Layout = () => {
+  return (
+    <LayoutContainer>
+      <ContentArea>
+        <div className="markdown-content">
+          {/* 你的 Markdown 内容 */}
+        </div>
+      </ContentArea>
+      
+      <SidebarArea>
+        <MarkdownToc />
+      </SidebarArea>
+    </LayoutContainer>
+  );
+};
+```
+
+## 样式定制
+
+组件使用 styled-components 构建，你可以通过以下方式定制样式：
+
+### 1. 修改全局样式
+
+在 `styles.ts` 文件中修改 `GlobalStyles`：
+
+```tsx
+export const GlobalStyles = createGlobalStyle`
+  /* 你的全局样式 */
+  .markdown-content h1 {
+    font-size: 32px;
+    color: #333;
+  }
+`;
+```
+
+### 2. 修改组件样式
+
+你可以导入并扩展组件样式：
+
+```tsx
+import { TocContainer } from './styles';
+import styled from 'styled-components';
+
+const CustomTocContainer = styled(TocContainer)`
+  background: #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+`;
+```
+
+## 移动端支持
+
+组件自动支持移动端：
+
+- 在桌面端显示为侧边栏
+- 在移动端（< 900px）显示为浮动按钮
+- 点击按钮打开侧边抽屉式目录
+- 支持触摸手势关闭
+
+## 依赖
+
+- `styled-components`: 用于样式管理
+- `react`: React 框架
+- `@types/styled-components`: TypeScript 类型定义
+
+## 文件结构
+
+```
+MarkdownToc/
+├── index.tsx          # 主组件
+├── styles.ts          # styled-components 样式
+├── useHeadsObserver.ts # 标题观察 hook
+└── README.md          # 说明文档
+```
+
+## 注意事项
+
+1. 确保标题元素有 `id` 属性，组件会自动检测
+2. 内容需要包含在 `.markdown-content` 类中
+3. 组件会自动处理滚动偏移，避免被固定头部遮挡
+4. 移动端需要确保有足够的 z-index 层级 
+
+
+## 功能特性
+
+- ✅ 自动检测页面中的 h2、h3、h4 标题
+- ✅ 平滑滚动到对应章节
+- ✅ 当前章节高亮显示
+- ✅ 响应式设计，支持移动端
+- ✅ 使用 styled-components 构建，样式隔离
+- ✅ 支持键盘导航
+
+## 使用方法
+
+### 基本使用
+
+```tsx
+import MarkdownToc from './components/Layout/MarkdownToc';
+
+function App() {
+  return (
+    <div>
+      <div className="markdown-content">
+        <h1>文档标题</h1>
+        <h2 id="section1">第一部分</h2>
+        <p>内容...</p>
+        <h3 id="subsection1">子章节</h3>
+        <p>内容...</p>
+      </div>
+      
+      <MarkdownToc />
+    </div>
+  );
+}
+```
+
+### 在布局中使用
+
+```tsx
+import React from 'react';
+import MarkdownToc from './MarkdownToc';
+import styled from 'styled-components';
+
+const LayoutContainer = styled.div`
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+`;
+
+const ContentArea = styled.div`
+  flex: 1;
+  min-width: 0;
+`;
+
+const SidebarArea = styled.div`
+  width: 300px;
+  flex-shrink: 0;
+  
+  @media (max-width: 768px) {
+    width: 100%;
+    order: -1;
+  }
+`;
+
+const Layout = () => {
+  return (
+    <LayoutContainer>
+      <ContentArea>
+        <div className="markdown-content">
+          {/* 你的 Markdown 内容 */}
+        </div>
+      </ContentArea>
+      
+      <SidebarArea>
+        <MarkdownToc />
+      </SidebarArea>
+    </LayoutContainer>
+  );
+};
+```
+
+## 样式定制
+
+组件使用 styled-components 构建，你可以通过以下方式定制样式：
+
+### 1. 修改全局样式
+
+在 `styles.ts` 文件中修改 `GlobalStyles`：
+
+```tsx
+export const GlobalStyles = createGlobalStyle`
+  /* 你的全局样式 */
+  .markdown-content h1 {
+    font-size: 32px;
+    color: #333;
+  }
+`;
+```
+
+### 2. 修改组件样式
+
+你可以导入并扩展组件样式：
+
+```tsx
+import { TocContainer } from './styles';
+import styled from 'styled-components';
+
+const CustomTocContainer = styled(TocContainer)`
+  background: #f0f0f0;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+`;
+```
+
+## 移动端支持
+
+组件自动支持移动端：
+
+- 在桌面端显示为侧边栏
+- 在移动端（< 900px）显示为浮动按钮
+- 点击按钮打开侧边抽屉式目录
+- 支持触摸手势关闭
+
+## 依赖
+
+- `styled-components`: 用于样式管理
+- `react`: React 框架
+- `@types/styled-components`: TypeScript 类型定义
+
+## 文件结构
+
+```
+MarkdownToc/
+├── index.tsx          # 主组件
+├── styles.ts          # styled-components 样式
+├── useHeadsObserver.ts # 标题观察 hook
+└── README.md          # 说明文档
+```
+
+## 注意事项
+
+1. 确保标题元素有 `id` 属性，组件会自动检测
+2. 内容需要包含在 `.markdown-content` 类中
+3. 组件会自动处理滚动偏移，避免被固定头部遮挡
+4. 移动端需要确保有足够的 z-index 层级 

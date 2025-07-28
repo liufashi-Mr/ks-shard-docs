@@ -1,0 +1,42 @@
+import Basic from './Basic';
+import WithNode from './WithNode';
+import WithCluster from './WithCluster';
+
+## KubeCtl
+
+KubeCtl 是一个 kubectl 命令执行模态框组件，用于在浏览器中执行 kubectl 命令。
+
+### Usage
+
+`KubectlModal`
+
+<DemoBlock
+  title="KubeCtl 基本用法"
+  description="展示 KubeCtl 组件的基本用法"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="KubeCtl 指定节点"
+  description="展示 KubeCtl 组件指定节点的用法"
+>
+  <WithNode />
+</DemoBlock>
+
+<DemoBlock
+  title="KubeCtl 集群查询"
+  description="展示 KubeCtl 组件集群查询的用法"
+>
+  <WithCluster />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| visible | 是否可见 | `boolean` | - |
+| title | 标题 | `string` | - |
+| onCancel | 取消回调 | `() => void` | - |
+| params | 参数配置 | `{ nodename?: string; cluster?: string; isEdgeNode?: boolean; isClusterQuery?: boolean; }` | - |
+| zIndex | 层级 | `number` | - | 

@@ -1,0 +1,39 @@
+import Basic from './Basic';
+import WithRates from './WithRates';
+import CustomStyle from './CustomStyle';
+
+## VolumeStatus
+
+VolumeStatus 是一个存储卷使用率图表组件，用于显示存储卷的使用情况和剩余空间。
+
+### Usage
+
+`VolumeStatus`
+
+<DemoBlock
+  title="VolumeStatus 基本用法"
+  description="展示 VolumeStatus 组件的基本用法，包括存储使用率显示"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="VolumeStatus 不同使用率"
+  description="展示 VolumeStatus 组件不同使用率的用法"
+>
+  <WithRates />
+</DemoBlock>
+
+<DemoBlock
+  title="VolumeStatus 自定义样式"
+  description="展示 VolumeStatus 组件自定义样式的用法"
+>
+  <CustomStyle />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| rate | 使用率 (0-100) | `number` | - |
+| className | 自定义类名 | `string` | - | 

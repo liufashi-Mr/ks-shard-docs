@@ -1,0 +1,112 @@
+import Basic from './Basic';
+import WithCount from './WithCount';
+import CustomColors from './CustomColors';
+
+## StatusIndicator
+
+StatusIndicator 是一个状态指示器组件，用于显示资源的状态信息，支持多种状态类型和颜色。
+
+### Usage
+
+`StatusIndicator`
+
+<DemoBlock
+  title="StatusIndicator 基本用法"
+  description="展示 StatusIndicator 组件的基本用法，包括不同状态类型的显示"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="StatusIndicator 带数量显示"
+  description="展示 StatusIndicator 组件带数量统计的用法"
+>
+  <WithCount />
+</DemoBlock>
+
+<DemoBlock
+  title="StatusIndicator 自定义颜色"
+  description="展示 StatusIndicator 组件自定义颜色的用法"
+>
+  <CustomColors />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| type | 状态类型 | `string` | - |
+| color | 状态颜色 | `'blue' \| 'success' \| 'warning' \| 'error' \| 'default'` | - |
+| state | 状态值（同 type） | `string` | - |
+| total | 总数 | `number` | - |
+| ready | 就绪数量 | `number` | - |
+| children | 自定义内容 | `ReactNode` | - |
+| className | 自定义类名 | `string` | - |
+
+### 支持的状态类型
+
+#### 蓝色状态 (blue)
+- `draft` - 草稿
+- `pending-review` - 待审核
+- `to-be-reviewed` - 待审查
+- `creating` - 创建中
+- `created` - 已创建
+
+#### 成功状态 (success)
+- `success` - 成功
+- `succeeded` - 已成功
+- `successful` - 成功的
+- `ready` - 就绪
+- `running` - 运行中
+- `jobrunning` - 任务运行中
+- `active` - 活跃
+- `normal` - 正常
+- `bound` - 已绑定
+- `available` - 可用
+- `healthy` - 健康
+- `ok` - 正常
+- `working` - 工作中
+- `passed` - 通过
+- `published` - 已发布
+
+#### 警告状态 (warning)
+- `warning` - 警告
+- `updating` - 更新中
+- `upgrading` - 升级中
+- `syncing` - 同步中
+- `building` - 构建中
+- `notrunning` - 未运行
+- `waiting` - 等待中
+- `terminating` - 终止中
+- `released` - 已发布
+- `unfinished` - 未完成
+- `firing` - 触发中
+- `major` - 主要
+- `deleting` - 删除中
+- `in-review` - 审核中
+
+#### 错误状态 (error)
+- `error` - 错误
+- `deleting` - 删除中
+- `deleted` - 已删除
+- `lost` - 丢失
+- `unschedulable` - 不可调度
+- `failed` - 失败
+- `critical` - 严重
+- `rejected` - 拒绝
+- `deployfailed` - 部署失败
+- `unready` - 未就绪
+
+#### 默认状态 (default)
+- `default` - 默认
+- `stopped` - 已停止
+- `disabled` - 已禁用
+- `pending` - 等待中
+- `unknown` - 未知
+- `draining` - 排水中
+- `terminated` - 已终止
+- `completed` - 已完成
+- `minor` - 次要
+- `paused` - 已暂停
+- `inactive` - 非活跃
+- `suspended` - 已暂停 

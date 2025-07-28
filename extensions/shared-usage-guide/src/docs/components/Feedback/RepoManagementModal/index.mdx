@@ -1,0 +1,33 @@
+import Basic from './Basic';
+import WithDetail from './WithDetail';
+
+## RepoManagementModal
+
+RepoManagementModal 是一个仓库管理模态框组件，用于管理代码仓库。
+
+### Usage
+
+`RepoManagementModal`
+
+<DemoBlock
+  title="RepoManagementModal 基本用法"
+  description="展示 RepoManagementModal 组件的基本用法"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="RepoManagementModal 带详情"
+  description="展示 RepoManagementModal 组件带详情的用法"
+>
+  <WithDetail />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| visible | 是否可见 | `boolean` | - |
+| detail | 仓库详情 | `RepoData` | - |
+| onOk | 确认回调 | `() => void` | - |
+| onCancel | 取消回调 | `() => void` | - | 

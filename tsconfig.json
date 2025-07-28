@@ -7,7 +7,12 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     // "isolatedModules": false,
-    "noEmit": false
+    "noEmit": false,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["extensions/shared-usage-guide/src/components/*"],
+      "@utils/*": ["extensions/shared-usage-guide/src/utils/*"]
+    }
   },
   "include": ["extensions", "types"]
 }

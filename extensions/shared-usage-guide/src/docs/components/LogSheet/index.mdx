@@ -1,0 +1,41 @@
+import Basic from './Basic';
+import WithHeader from './WithHeader';
+import WithCustomProps from './WithCustomProps';
+
+## LogSheet
+
+LogSheet 是一个日志侧边栏组件，用于显示容器日志信息。
+
+### Usage
+
+`LogSheet`
+
+<DemoBlock
+  title="LogSheet 基本用法"
+  description="展示 LogSheet 组件的基本用法，包括日志显示"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="LogSheet 自定义头部"
+  description="展示 LogSheet 组件自定义头部的用法"
+>
+  <WithHeader />
+</DemoBlock>
+
+<DemoBlock
+  title="LogSheet 自定义属性"
+  description="展示 LogSheet 组件自定义属性的用法"
+>
+  <WithCustomProps />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| headerTitle | 头部标题 | `ReactNode` | - |
+| headerDescription | 头部描述 | `ReactNode` | - |
+| headerIcon | 头部图标 | `ReactNode` | - |
+| sheetContentProps | 侧边栏内容属性 | `SheetContentProps` | - | 

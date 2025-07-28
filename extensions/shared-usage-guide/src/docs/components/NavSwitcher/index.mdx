@@ -1,0 +1,41 @@
+import Basic from './Basic';
+import WithContent from './WithContent';
+import WithTitle from './WithTitle';
+
+## NavSwitcher
+
+NavSwitcher 是一个导航切换器组件，用于在导航中显示切换内容。
+
+### Usage
+
+`NavSwitcher`
+
+<DemoBlock
+  title="NavSwitcher 基本用法"
+  description="展示 NavSwitcher 组件的基本用法，包括折叠状态"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="NavSwitcher 内容"
+  description="展示 NavSwitcher 组件内容的用法"
+>
+  <WithContent />
+</DemoBlock>
+
+<DemoBlock
+  title="NavSwitcher 标题"
+  description="展示 NavSwitcher 组件标题的用法"
+>
+  <WithTitle />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| collapsed | 是否折叠 | `boolean` | - |
+| title | 标题 | `string` | - |
+| subtitle | 副标题 | `string` | - |
+| content | 内容 | `ReactNode` | - | 

@@ -1,0 +1,44 @@
+import TableSkeletonBasic from './TableSkeletonBasic';
+import TableSkeletonWithToolbar from './TableSkeletonWithToolbar';
+import TableSkeletonWithCreateButton from './TableSkeletonWithCreateButton';
+
+## Skeletons
+
+Skeletons 是一组骨架屏组件，用于在数据加载时显示占位内容。
+
+### Usage
+
+#### TableSkeleton
+
+`TableSkeleton` 是一个表格骨架屏组件，用于在表格数据加载时显示占位内容。
+
+<DemoBlock
+  title="TableSkeleton 基本用法"
+  description="展示 TableSkeleton 组件的基本用法"
+>
+  <TableSkeletonBasic />
+</DemoBlock>
+
+<DemoBlock
+  title="TableSkeleton 带工具栏"
+  description="展示 TableSkeleton 组件带工具栏的用法"
+>
+  <TableSkeletonWithToolbar />
+</DemoBlock>
+
+<DemoBlock
+  title="TableSkeleton 带创建按钮"
+  description="展示 TableSkeleton 组件带创建按钮的用法"
+>
+  <TableSkeletonWithCreateButton />
+</DemoBlock>
+
+### API
+
+#### TableSkeleton
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| row | 行数 | `number` | - |
+| hasCreateButton | 是否有创建按钮 | `boolean` | - |
+| hasToolbar | 是否有工具栏 | `boolean` | - | 

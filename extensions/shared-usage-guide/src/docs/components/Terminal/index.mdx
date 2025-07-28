@@ -1,0 +1,44 @@
+import Basic from './Basic';
+import WithOptions from './WithOptions';
+import WithUploadDownload from './WithUploadDownload';
+
+## Terminal
+
+Terminal 是一个终端组件，用于在浏览器中显示和操作终端会话。
+
+### Usage
+
+`Terminal`
+
+<DemoBlock
+  title="Terminal 基本用法"
+  description="展示 Terminal 组件的基本用法，包括终端会话"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="Terminal 自定义选项"
+  description="展示 Terminal 组件自定义选项的用法"
+>
+  <WithOptions />
+</DemoBlock>
+
+<DemoBlock
+  title="Terminal 文件上传下载"
+  description="展示 Terminal 组件文件上传下载的用法"
+>
+  <WithUploadDownload />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| websocketUrl | WebSocket URL | `string` | - |
+| terminalOptions | 终端选项 | `TerminalOptions` | - |
+| initText | 初始文本 | `string` | - |
+| isEdgeNode | 是否为边缘节点 | `boolean` | - |
+| isLoading | 是否加载中 | `boolean` | - |
+| uploadUrl | 上传 URL | `string` | - |
+| downloadUrl | 下载 URL | `string` | - | 

@@ -1,0 +1,26 @@
+import Basic from './Basic';
+import WithLoading from './WithLoading';
+
+## BaseTable
+
+BaseTable 是一个基础表格组件，基于 react-table 构建，提供灵活的表格功能。
+
+### Usage
+
+`BaseTable`
+
+<DemoBlock title="BaseTable 基本用法" description="展示 BaseTable 组件的基本用法，包括数据展示">
+  <Basic />
+</DemoBlock>
+
+<DemoBlock title="BaseTable 加载状态" description="展示 BaseTable 组件加载状态的用法">
+  <WithLoading />
+</DemoBlock>
+
+### API
+
+| 参数       | 说明     | 类型          | 默认值 |
+| ---------- | -------- | ------------- | ------ |
+| dataSource | 数据源   | `T[]`         | -      |
+| loading    | 加载状态 | `boolean`     | -      |
+| columns    | 列配置   | `Column<T>[]` | -      |

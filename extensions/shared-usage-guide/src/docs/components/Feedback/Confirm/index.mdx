@@ -1,0 +1,44 @@
+import Basic from './Basic';
+import WithIcon from './WithIcon';
+import WithDescription from './WithDescription';
+
+## Confirm
+
+Confirm 是一个确认对话框组件，用于显示确认信息并获取用户确认。
+
+### Usage
+
+`ConfirmModal`
+
+<DemoBlock
+  title="Confirm 基本用法"
+  description="展示 Confirm 组件的基本用法"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="Confirm 带图标"
+  description="展示 Confirm 组件带图标的用法"
+>
+  <WithIcon />
+</DemoBlock>
+
+<DemoBlock
+  title="Confirm 带描述"
+  description="展示 Confirm 组件带描述的用法"
+>
+  <WithDescription />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| titleIconProps | 标题图标属性 | `TitleIconProps` | - |
+| titleIcon | 标题图标 | `ReactNode` | - |
+| title | 标题 | `ReactNode` | - |
+| description | 描述 | `ReactNode` | - |
+| visible | 是否可见 | `boolean` | - |
+| onOk | 确认回调 | `() => void` | - |
+| onCancel | 取消回调 | `() => void` | - | 

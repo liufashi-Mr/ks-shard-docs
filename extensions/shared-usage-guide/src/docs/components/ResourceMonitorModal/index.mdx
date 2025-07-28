@@ -1,0 +1,42 @@
+import Basic from './Basic';
+import WithDetail from './WithDetail';
+import WithCallbacks from './WithCallbacks';
+
+## ResourceMonitorModal
+
+ResourceMonitorModal 是一个资源监控模态框组件，用于显示应用的资源监控信息。
+
+### Usage
+
+`ResourceMonitorModal`
+
+<DemoBlock
+  title="ResourceMonitorModal 基本用法"
+  description="展示 ResourceMonitorModal 组件的基本用法，包括资源监控"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="ResourceMonitorModal 详细信息"
+  description="展示 ResourceMonitorModal 组件详细信息的用法"
+>
+  <WithDetail />
+</DemoBlock>
+
+<DemoBlock
+  title="ResourceMonitorModal 回调函数"
+  description="展示 ResourceMonitorModal 组件回调函数的用法"
+>
+  <WithCallbacks />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| visible | 是否可见 | `boolean` | - |
+| detail | 详细信息 | `any` | - |
+| onCancel | 取消回调 | `() => void` | - |
+| workspace | 工作空间 | `string` | - |
+| cluster | 集群 | `string` | - | 

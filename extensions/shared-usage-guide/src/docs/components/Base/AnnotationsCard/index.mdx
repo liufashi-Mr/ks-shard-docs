@@ -1,0 +1,22 @@
+import Demo from './Demo';
+
+## AnnotationsCard
+
+### Usage
+
+AnnotationsCard 组件用于展示注解对象，并支持隐藏某些键，一般用在 annotations 字段上。
+
+<DemoBlock
+  title="AnnotationsCard 基本用法"
+  description="展示 AnnotationsCard 组件的基本用法，包括注解对象和隐藏键的配置"
+>
+  <Demo />
+</DemoBlock>
+
+### API
+
+| 参数        | 说明            | 类型                        | 默认值 |
+| ----------- | --------------- | --------------------------- | ------ |
+| className   | 自定义类名      | string                      | -      |
+| annotations | 注解对象        | `{ [key: string]: string }` | -      |
+| hiddenKeys  | 隐藏的 key 列表 | string[]                    | -      |

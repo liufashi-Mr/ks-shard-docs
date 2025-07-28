@@ -1,0 +1,38 @@
+import Basic from './Basic';
+import WithLabels from './WithLabels';
+import WithAnnotations from './WithAnnotations';
+
+## MetaData
+
+MetaData 是一个元数据展示组件，用于显示 Kubernetes 资源的标签和注解信息。
+
+### Usage
+
+`MetaData`
+
+<DemoBlock
+  title="MetaData 基本用法"
+  description="展示 MetaData 组件的基本用法，包括资源元数据"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="MetaData 标签"
+  description="展示 MetaData 组件标签信息的用法"
+>
+  <WithLabels />
+</DemoBlock>
+
+<DemoBlock
+  title="MetaData 注解"
+  description="展示 MetaData 组件注解信息的用法"
+>
+  <WithAnnotations />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| detail | 资源详细信息 | `Record<string, any>` | - | 

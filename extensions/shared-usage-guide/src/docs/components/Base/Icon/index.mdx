@@ -1,0 +1,39 @@
+import Basic from './Basic';
+import WithVariants from './WithVariants';
+import WithSizes from './WithSizes';
+import Builtin from './Builtin';
+
+## Icon
+
+Icon 是一个图标组件，支持多种图标类型、颜色变体和尺寸设置。基于[Kube Design Icons](https://kube.design/zh/Icons/Icons), 将文档中的 PascalCase转为kebab-case 给 Icon 组件的 name 属性
+
+### Usage
+
+`Icon`
+
+<DemoBlock title="Icon 基本用法" description="展示 Icon 组件的基本用法，包括不同图标类型">
+  <Basic />
+</DemoBlock>
+
+<DemoBlock title="Icon 变体" description="展示 Icon 组件不同颜色变体的用法">
+  <WithVariants />
+</DemoBlock>
+
+<DemoBlock title="Icon 尺寸" description="展示 Icon 组件不同尺寸的用法">
+  <WithSizes />
+</DemoBlock>
+
+### shared 中内置的 Icon
+
+<DemoBlock title="其他内置 Icon" description="展示一些定制的 Icon">
+  <Builtin />
+</DemoBlock>
+
+### API
+
+| 参数    | 说明     | 类型                                        | 默认值 |
+| ------- | -------- | ------------------------------------------- | ------ |
+| name    | 图标名称 | `string`                                    | -      |
+| color   | 图标颜色 | `string`                                    | -      |
+| variant | 颜色变体 | `'dark' \| 'light' \| 'coloured' \| string` | -      |
+| size    | 图标尺寸 | `number`                                    | -      |

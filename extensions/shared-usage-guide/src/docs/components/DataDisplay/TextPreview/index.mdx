@@ -1,0 +1,33 @@
+import Basic from './Basic';
+import CustomEditor from './CustomEditor';
+
+## TextPreview
+
+TextPreview 是一个文本预览组件，用于展示文本文件，支持多种文件格式和代码高亮。
+
+### Usage
+
+`TextPreview`
+
+<DemoBlock
+  title="TextPreview 基本用法"
+  description="展示 TextPreview 组件的基本用法，包括单文件预览"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="TextPreview 自定义编辑器"
+  description="展示 TextPreview 组件自定义编辑器配置的用法"
+>
+  <CustomEditor />
+</DemoBlock>
+
+### API
+
+| 参数          | 说明           | 类型                                                       | 默认值  |
+| ------------- | -------------- | ---------------------------------------------------------- | ------- |
+| files         | 文件内容对象   | `Record<string, string>`                                   | -       |
+| type          | 文件类型       | `string`                                                   | -       |
+| hideToolbar   | 是否隐藏工具栏 | `boolean`                                                  | `false` |
+| editorOptions | 编辑器配置选项 | `Partial<CodeEditorProps>` mode 目前仅支持`yaml`和`groovy` | -       |

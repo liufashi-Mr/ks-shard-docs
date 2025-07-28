@@ -1,0 +1,42 @@
+import Basic from './Basic';
+import WithTheme from './WithTheme';
+import WithGFM from './WithGFM';
+
+## Markdown
+
+Markdown 是一个 Markdown 渲染组件，支持 GitHub Flavored Markdown (GFM) 和主题定制。
+
+### Usage
+
+`Markdown`
+
+<DemoBlock
+  title="Markdown 基本用法"
+  description="展示 Markdown 组件的基本用法，包括文本渲染"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="Markdown 主题"
+  description="展示 Markdown 组件不同主题的用法"
+>
+  <WithTheme />
+</DemoBlock>
+
+<DemoBlock
+  title="Markdown GFM"
+  description="展示 Markdown 组件支持 GFM 的用法"
+>
+  <WithGFM />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| children | Markdown 文本内容 | `string` | - |
+| isSupportGFM | 是否支持 GFM | `boolean` | `false` |
+| themeName | 主题名称 | `'global-styles' \| 'github-light'` | `'global-styles'` |
+| classNames | 自定义类名 | `{ root?: string, markdown?: string }` | - |
+| styles | 自定义样式 | `{ root?: CSSProperties }` | - | 

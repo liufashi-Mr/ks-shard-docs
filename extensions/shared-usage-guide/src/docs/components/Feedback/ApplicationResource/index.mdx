@@ -1,0 +1,34 @@
+import Basic from './Basic';
+import WithWorkspace from './WithWorkspace';
+
+## ApplicationResource
+
+ApplicationResource 是一个应用资源监控模态框组件，用于监控应用的资源使用情况。
+
+### Usage
+
+`ResourceMonitorModal`
+
+<DemoBlock
+  title="ApplicationResource 基本用法"
+  description="展示 ApplicationResource 组件的基本用法"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="ApplicationResource 指定工作空间"
+  description="展示 ApplicationResource 组件指定工作空间的用法"
+>
+  <WithWorkspace />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| visible | 是否可见 | `boolean` | - |
+| detail | 应用详情 | `any` | - |
+| onCancel | 取消回调 | `() => void` | - |
+| workspace | 工作空间 | `string` | - |
+| cluster | 集群名称 | `string` | - | 

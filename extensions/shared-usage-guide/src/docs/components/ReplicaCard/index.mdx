@@ -1,0 +1,43 @@
+import Basic from './Basic';
+import WithScale from './WithScale';
+import WithTheme from './WithTheme';
+
+## ReplicaCard
+
+ReplicaCard 是一个副本卡片组件，用于显示和管理应用的副本数量。
+
+### Usage
+
+`ReplicaCard`
+
+<DemoBlock
+  title="ReplicaCard 基本用法"
+  description="展示 ReplicaCard 组件的基本用法，包括副本信息显示"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="ReplicaCard 缩放功能"
+  description="展示 ReplicaCard 组件缩放功能的用法"
+>
+  <WithScale />
+</DemoBlock>
+
+<DemoBlock
+  title="ReplicaCard 主题"
+  description="展示 ReplicaCard 组件不同主题的用法"
+>
+  <WithTheme />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| module | 模块名称 | `string` | - |
+| detail | 详细信息 | `Record<string, any>` | - |
+| enableScale | 是否启用缩放 | `boolean` | - |
+| onScale | 缩放回调 | `(replica: number) => void` | - |
+| theme | 主题 | `'light' \| 'dark'` | - |
+| chartSize | 图表尺寸 | `number` | - | 

@@ -1,0 +1,27 @@
+import Basic from './Basic';
+import WithCustomTitle from './WithCustomTitle';
+
+## DownloadModal
+
+DownloadModal 是一个文件下载模态框组件，用于文件下载功能。
+
+### Usage
+
+`DownloadModal`
+
+<DemoBlock title="DownloadModal 基本用法" description="展示 DownloadModal 组件的基本用法">
+  <Basic />
+</DemoBlock>
+
+<DemoBlock title="DownloadModal 自定义标题" description="展示 DownloadModal 组件自定义标题的用法">
+  <WithCustomTitle />
+</DemoBlock>
+
+### API
+
+| 参数        | 说明     | 类型         | 默认值 |
+| ----------- | -------- | ------------ | ------ |
+| visible     | 是否可见 | `boolean`    | -      |
+| title       | 标题     | `ReactNode`  | -      |
+| downloadUrl | 下载 URL | `string`     | -      |
+| onCancel    | 取消回调 | `() => void` | -      |

@@ -1,0 +1,40 @@
+import Basic from './Basic';
+import WithStatus from './WithStatus';
+import WithDetails from './WithDetails';
+
+## PodIndicator
+
+PodIndicator 是一个 Pod 状态指示器组件，用于显示 Pod 的详细状态信息，包括容器状态、重启次数等。
+
+### Usage
+
+`PodIndicator`
+
+<DemoBlock
+  title="PodIndicator 基本用法"
+  description="展示 PodIndicator 组件的基本用法，包括 Pod 状态显示"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="PodIndicator 不同状态"
+  description="展示 PodIndicator 组件不同 Pod 状态的用法"
+>
+  <WithStatus />
+</DemoBlock>
+
+<DemoBlock
+  title="PodIndicator 详细信息"
+  description="展示 PodIndicator 组件带详细信息的用法"
+>
+  <WithDetails />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| module | 模块名称 | `string` | - |
+| cluster | 集群名称 | `string` | - |
+| record | Pod 记录数据 | `FormattedPod` | - | 

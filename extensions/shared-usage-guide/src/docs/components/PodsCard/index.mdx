@@ -1,0 +1,53 @@
+import Basic from './Basic';
+import WithSearch from './WithSearch';
+import WithRefresh from './WithRefresh';
+
+## PodsCard
+
+PodsCard 是一个 Pod 卡片组件，用于展示 Pod 列表和相关信息，支持搜索、刷新和分页功能。
+
+### Usage
+
+`PodsCard`
+
+<DemoBlock
+  title="PodsCard 基本用法"
+  description="展示 PodsCard 组件的基本用法，包括 Pod 列表展示"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="PodsCard 搜索功能"
+  description="展示 PodsCard 组件搜索功能的用法"
+>
+  <WithSearch />
+</DemoBlock>
+
+<DemoBlock
+  title="PodsCard 刷新功能"
+  description="展示 PodsCard 组件刷新功能的用法"
+>
+  <WithRefresh />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| prefix | 前缀 | `string` | - |
+| title | 标题 | `string` | - |
+| detail | 详细信息 | `Record<string, any>` | - |
+| details | 详细信息集合 | `Record<any, any>` | - |
+| hideHeader | 隐藏头部 | `boolean` | - |
+| hideFooter | 隐藏底部 | `boolean` | - |
+| isFederated | 是否联邦集群 | `boolean` | - |
+| clusters | 集群列表 | `string[]` | - |
+| limit | 限制数量 | `number` | - |
+| noWrapper | 无包装器 | `boolean` | - |
+| monitorOptions | 监控选项 | `MonitorStoreProps` | - |
+| queryOptions | 查询选项 | `Record<string, any>` | - |
+| webSocketOptions | WebSocket 选项 | `Record<string, any>` | - |
+| onSearch | 搜索回调 | `(value: string) => void` | - |
+| onRefresh | 刷新回调 | `() => void` | - |
+| onPageChange | 分页回调 | `(page: number) => void` | - | 

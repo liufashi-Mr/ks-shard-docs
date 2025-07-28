@@ -1,0 +1,41 @@
+import Basic from './Basic';
+import WithContent from './WithContent';
+import WithCustomProps from './WithCustomProps';
+
+## FullScreenModal
+
+FullScreenModal 是一个全屏模态框组件，用于显示全屏内容。
+
+### Usage
+
+`FullScreenModal`
+
+<DemoBlock
+  title="FullScreenModal 基本用法"
+  description="展示 FullScreenModal 组件的基本用法"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="FullScreenModal 带内容"
+  description="展示 FullScreenModal 组件带内容的用法"
+>
+  <WithContent />
+</DemoBlock>
+
+<DemoBlock
+  title="FullScreenModal 自定义属性"
+  description="展示 FullScreenModal 组件自定义属性的用法"
+>
+  <WithCustomProps />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| visible | 是否可见 | `boolean` | - |
+| onCancel | 取消回调 | `() => void` | - |
+| title | 标题 | `ReactNode` | - |
+| children | 子元素 | `ReactNode` | - | 

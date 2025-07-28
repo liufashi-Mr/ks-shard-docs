@@ -1,0 +1,59 @@
+import TinyArea from './TinyArea';
+import SimpleArea from './SimpleArea';
+import SimpleCircle from './SimpleCircle';
+import MediumArea from './MediumArea';
+
+## Charts
+
+Charts 是一组图表组件，包括 TinyArea、SimpleArea、SimpleCircle 和 MediumArea 等。
+
+### Usage
+
+#### TinyArea
+
+`TinyArea` 是一个小型面积图组件，用于显示数据趋势。
+
+<DemoBlock title="TinyArea 基本用法" description="展示 TinyArea 组件的基本用法">
+  <TinyArea />
+</DemoBlock>
+
+#### SimpleArea
+
+`SimpleArea` 是一个简单面积图组件。
+
+<DemoBlock title="SimpleArea 基本用法" description="展示 SimpleArea 组件的基本用法">
+  <SimpleArea />
+</DemoBlock>
+
+#### SimpleCircle
+
+`SimpleCircle` 是一个简单圆形图表组件。
+
+<DemoBlock title="SimpleCircle 基本用法" description="展示 SimpleCircle 组件的基本用法">
+  <SimpleCircle />
+</DemoBlock>
+
+#### MediumArea
+
+`MediumArea` 是一个中等大小的面积图组件。
+
+<DemoBlock title="MediumArea 基本用法" description="展示 MediumArea 组件的基本用法">
+  <MediumArea />
+</DemoBlock>
+
+### API
+
+#### TinyArea
+
+| 参数       | 说明       | 类型                                         | 默认值 |
+| ---------- | ---------- | -------------------------------------------- | ------ |
+| width      | 宽度       | `number \| string`                           | -      |
+| height     | 高度       | `number \| string`                           | -      |
+| title      | 标题       | `string`                                     | -      |
+| unit       | 单位       | `string`                                     | -      |
+| data       | 数据       | `Record<string, string \| number \| null>[]` | -      |
+| bgColor    | 背景色     | `string`                                     | -      |
+| areaColors | 面积图颜色 | `any[]`                                      | -      |
+| titleNode  | 标题节点   | `ReactNode`                                  | -      |
+| areaNode   | 面积图节点 | `ReactNode`                                  | -      |
+| darkMode   | 暗色模式   | `boolean`                                    | -      |

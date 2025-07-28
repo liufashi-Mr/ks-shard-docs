@@ -1,0 +1,47 @@
+import Basic from './Basic';
+import WithLoading from './WithLoading';
+import WithCustomDesc from './WithCustomDesc';
+
+## StopModal
+
+StopModal 是一个停止确认对话框组件，用于确认停止 Kubernetes 资源。
+
+### Usage
+
+`StopModal`
+
+<DemoBlock
+  title="StopModal 基本用法"
+  description="展示 StopModal 组件的基本用法，包括停止确认"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="StopModal 加载状态"
+  description="展示 StopModal 组件加载状态的用法"
+>
+  <WithLoading />
+</DemoBlock>
+
+<DemoBlock
+  title="StopModal 自定义描述"
+  description="展示 StopModal 组件自定义描述的用法"
+>
+  <WithCustomDesc />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| visible | 是否可见 | `boolean` | - |
+| type | 资源类型 | `string` | - |
+| resource | 资源名称 | `string` | - |
+| title | 标题 | `string` | - |
+| desc | 描述 | `string` | - |
+| app | 应用名称 | `string` | - |
+| isSubmitting | 是否提交中 | `boolean` | - |
+| onCancel | 取消回调 | `() => void` | - |
+| onOk | 确认回调 | `() => void` | - |
+| confirmLoading | 确认按钮加载状态 | `boolean` | - | 

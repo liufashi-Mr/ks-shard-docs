@@ -1,0 +1,38 @@
+import Basic from './Basic';
+import WithIcon from './WithIcon';
+import WithEllipsis from './WithEllipsis';
+
+## Text
+
+Text 是一个文本展示组件，支持图标、描述、省略号和点击事件等功能。
+
+### 基本用法
+
+<DemoBlock title="Text 基本用法" description="展示 Text 组件的基本用法，包括标题和描述">
+  <Basic />
+</DemoBlock>
+
+### 带图标
+
+<DemoBlock title="Text 带图标" description="展示 Text 组件带图标的用法">
+  <WithIcon />
+</DemoBlock>
+
+### 长文本省略
+
+<DemoBlock title="Text 省略号" description="展示 Text 组件省略号功能的用法">
+  <WithEllipsis />
+</DemoBlock>
+
+### API
+
+| 参数        | 说明           | 类型         | 默认值 |
+| ----------- | -------------- | ------------ | ------ |
+| icon        | 图标           | `any`        | -      |
+| title       | 标题           | `any`        | -      |
+| description | 描述           | `any`        | -      |
+| className   | 自定义类名     | `string`     | -      |
+| ellipsis    | 是否显示省略号 | `boolean`    | -      |
+| extra       | 额外内容       | `any`        | -      |
+| onClick     | 点击事件       | `() => void` | -      |
+| tooltipIcon | 提示图标       | `any`        | -      |

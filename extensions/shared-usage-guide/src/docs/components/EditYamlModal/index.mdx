@@ -1,0 +1,45 @@
+import Basic from './Basic';
+import WithYaml from './WithYaml';
+import WithReadOnly from './WithReadOnly';
+
+## EditYamlModal
+
+EditYamlModal 是一个编辑 YAML 模态框组件，用于编辑 Kubernetes 资源的 YAML 配置。
+
+### Usage
+
+`EditYamlModal`
+
+<DemoBlock
+  title="EditYamlModal 基本用法"
+  description="展示 EditYamlModal 组件的基本用法，包括 YAML 编辑"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="EditYamlModal YAML 内容"
+  description="展示 EditYamlModal 组件 YAML 内容的用法"
+>
+  <WithYaml />
+</DemoBlock>
+
+<DemoBlock
+  title="EditYamlModal 只读模式"
+  description="展示 EditYamlModal 组件只读模式的用法"
+>
+  <WithReadOnly />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| yaml | YAML 内容 | `string` | - |
+| detail | 详细信息 | `Record<string, any>` | - |
+| visible | 是否可见 | `boolean` | - |
+| onOk | 确认回调 | `(yaml: string) => void` | - |
+| onCancel | 取消回调 | `() => void` | - |
+| onChange | 变化回调 | `(yaml: string) => void` | - |
+| readOnly | 只读模式 | `boolean` | - |
+| confirmLoading | 确认按钮加载状态 | `boolean` | - | 

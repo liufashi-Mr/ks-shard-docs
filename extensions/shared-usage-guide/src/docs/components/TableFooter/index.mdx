@@ -1,0 +1,46 @@
+import Basic from './Basic';
+import WithPagination from './WithPagination';
+import WithCustom from './WithCustom';
+
+## TableFooter
+
+TableFooter 是一个表格底部组件，用于显示分页、总数等信息。
+
+### Usage
+
+`TableFooter`
+
+<DemoBlock
+  title="TableFooter 基本用法"
+  description="展示 TableFooter 组件的基本用法，包括分页信息"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="TableFooter 分页"
+  description="展示 TableFooter 组件分页功能的用法"
+>
+  <WithPagination />
+</DemoBlock>
+
+<DemoBlock
+  title="TableFooter 自定义"
+  description="展示 TableFooter 组件自定义配置的用法"
+>
+  <WithCustom />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| instance | 表格实例 | `TableInstance` | - |
+| totalCount | 总数量 | `number` | - |
+| isShowSetPageSize | 是否显示页面大小设置 | `boolean` | - |
+| isShowDivider | 是否显示分割线 | `boolean` | - |
+| isShowTotalCount | 是否显示总数量 | `boolean` | - |
+| isShowPagination | 是否显示分页 | `boolean` | - |
+| className | 类名 | `string` | - |
+| style | 样式 | `CSSProperties` | - |
+| placement | 位置 | `any` | - | 

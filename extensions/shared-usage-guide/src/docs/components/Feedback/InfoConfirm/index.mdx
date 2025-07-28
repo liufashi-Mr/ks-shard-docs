@@ -1,0 +1,34 @@
+import Basic from './Basic';
+import WithCustomContent from './WithCustomContent';
+
+## InfoConfirm
+
+InfoConfirm 是一个信息确认模态框组件，用于显示信息并获取用户确认。
+
+### Usage
+
+`InfoConfirmModal`
+
+<DemoBlock
+  title="InfoConfirm 基本用法"
+  description="展示 InfoConfirm 组件的基本用法"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="InfoConfirm 自定义内容"
+  description="展示 InfoConfirm 组件自定义内容的用法"
+>
+  <WithCustomContent />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| visible | 是否可见 | `boolean` | - |
+| title | 标题 | `ReactNode` | - |
+| content | 内容 | `ReactNode` | - |
+| onOk | 确认回调 | `() => void` | - |
+| onCancel | 取消回调 | `() => void` | - | 

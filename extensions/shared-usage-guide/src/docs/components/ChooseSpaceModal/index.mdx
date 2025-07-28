@@ -1,0 +1,41 @@
+import Basic from './Basic';
+import WithDefaultVal from './WithDefaultVal';
+import WithCallbacks from './WithCallbacks';
+
+## ChooseSpaceModal
+
+ChooseSpaceModal 是一个选择空间模态框组件，用于选择工作空间和命名空间。
+
+### Usage
+
+`ChooseSpaceModal`
+
+<DemoBlock
+  title="ChooseSpaceModal 基本用法"
+  description="展示 ChooseSpaceModal 组件的基本用法，包括空间选择"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="ChooseSpaceModal 默认值"
+  description="展示 ChooseSpaceModal 组件默认值的用法"
+>
+  <WithDefaultVal />
+</DemoBlock>
+
+<DemoBlock
+  title="ChooseSpaceModal 回调函数"
+  description="展示 ChooseSpaceModal 组件回调函数的用法"
+>
+  <WithCallbacks />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| visible | 是否可见 | `boolean` | - |
+| onOk | 确认回调 | `(data: RejectFormData) => void` | - |
+| onCancel | 取消回调 | `() => void` | - |
+| defaultVal | 默认值 | `{ namespace?: string; workspace?: string; cluster?: string; }` | - | 

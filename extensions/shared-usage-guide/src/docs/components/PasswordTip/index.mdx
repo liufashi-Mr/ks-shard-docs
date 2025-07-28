@@ -1,0 +1,40 @@
+import Basic from './Basic';
+import WithProgress from './WithProgress';
+import CustomStyle from './CustomStyle';
+
+## PasswordTip
+
+PasswordTip 是一个密码强度提示组件，用于显示密码强度要求和验证结果。
+
+### Usage
+
+`PasswordTip`
+
+<DemoBlock
+  title="PasswordTip 基本用法"
+  description="展示 PasswordTip 组件的基本用法，包括密码强度提示"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="PasswordTip 进度条"
+  description="展示 PasswordTip 组件带进度条的用法"
+>
+  <WithProgress />
+</DemoBlock>
+
+<DemoBlock
+  title="PasswordTip 自定义样式"
+  description="展示 PasswordTip 组件自定义样式的用法"
+>
+  <CustomStyle />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| password | 密码字符串 | `string` | - |
+| className | 自定义类名 | `string` | - |
+| hasProgress | 是否显示进度条 | `boolean` | - | 

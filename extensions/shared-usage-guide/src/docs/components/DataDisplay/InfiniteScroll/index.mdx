@@ -1,0 +1,44 @@
+import Basic from './Basic';
+import WithLoading from './WithLoading';
+import WithEmpty from './WithEmpty';
+
+## InfiniteScroll
+
+InfiniteScroll 是一个无限滚动组件，用于实现列表的无限滚动加载功能。
+
+### 基本使用
+
+<DemoBlock
+  title="InfiniteScroll 基本用法"
+  description="展示 InfiniteScroll 组件的基本用法，包括无限滚动"
+>
+  <Basic />
+</DemoBlock>
+
+### 自定义加载样式
+
+<DemoBlock
+  title="InfiniteScroll 自定义加载样式"
+  description="通过 loading 字段自定义组件加载状态样式"
+>
+  <WithLoading />
+</DemoBlock>
+
+### 空状态
+
+<DemoBlock title="InfiniteScroll 自定义空状态" description="展示 InfiniteScroll 组件空状态的用法">
+  <WithEmpty />
+</DemoBlock>
+
+### API
+
+| 参数         | 说明       | 类型                                                                                                                         | 默认值 |
+| ------------ | ---------- | ---------------------------------------------------------------------------------------------------------------------------- | ------ |
+| children     | 子元素     | `ReactNode`                                                                                                                  | -      |
+| isLoading    | 是否加载中 | `boolean`                                                                                                                    | -      |
+| loading      | 加载组件   | `ReactNode`                                                                                                                  | -      |
+| isRefreshing | 是否刷新中 | `boolean`                                                                                                                    | -      |
+| isEmpty      | 是否为空   | `boolean`                                                                                                                    | -      |
+| empty        | 空状态组件 | `ReactNode`                                                                                                                  | -      |
+| classNames   | 类名配置   | `{ container?: string; content?: string; loadingWrapper?: string; refreshingWrapper?: string; }`                             | -      |
+| styles       | 样式配置   | `{ container?: CSSProperties; content?: CSSProperties; loadingWrapper?: CSSProperties; refreshingWrapper?: CSSProperties; }` | -      |

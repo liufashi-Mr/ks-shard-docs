@@ -1,0 +1,42 @@
+import Basic from './Basic';
+import WithSwitcher from './WithSwitcher';
+import WithTitle from './WithTitle';
+
+## ListCollapseLayout
+
+ListCollapseLayout 是一个可折叠的列表布局组件，用于展示可折叠的列表页面。
+
+### Usage
+
+`ListCollapseLayout`
+
+<DemoBlock
+  title="ListCollapseLayout 基本用法"
+  description="展示 ListCollapseLayout 组件的基本用法，包括折叠布局"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="ListCollapseLayout 切换器"
+  description="展示 ListCollapseLayout 组件切换器的用法"
+>
+  <WithSwitcher />
+</DemoBlock>
+
+<DemoBlock
+  title="ListCollapseLayout 标题"
+  description="展示 ListCollapseLayout 组件标题的用法"
+>
+  <WithTitle />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| children | 子元素 | `ReactNode` | - |
+| navMenu | 导航菜单 | `ReactNode` | - |
+| showCollapsedBtn | 是否显示折叠按钮 | `boolean` | - |
+| switcher | 切换器配置 | `Switcher` | - |
+| title | 标题 | `ReactNode` | - | 

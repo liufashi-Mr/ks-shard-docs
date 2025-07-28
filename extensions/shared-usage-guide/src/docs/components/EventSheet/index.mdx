@@ -1,0 +1,41 @@
+import Basic from './Basic';
+import WithHeader from './WithHeader';
+import WithCustomProps from './WithCustomProps';
+
+## EventSheet
+
+EventSheet 是一个事件侧边栏组件，用于显示 Kubernetes 事件信息。
+
+### Usage
+
+`EventSheet`
+
+<DemoBlock
+  title="EventSheet 基本用法"
+  description="展示 EventSheet 组件的基本用法，包括事件显示"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="EventSheet 自定义头部"
+  description="展示 EventSheet 组件自定义头部的用法"
+>
+  <WithHeader />
+</DemoBlock>
+
+<DemoBlock
+  title="EventSheet 自定义属性"
+  description="展示 EventSheet 组件自定义属性的用法"
+>
+  <WithCustomProps />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| headerTitle | 头部标题 | `ReactNode` | - |
+| headerDescription | 头部描述 | `ReactNode` | - |
+| headerIcon | 头部图标 | `ReactNode` | - |
+| sheetContentProps | 侧边栏内容属性 | `SheetContentProps` | - | 

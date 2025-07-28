@@ -1,0 +1,48 @@
+import Basic from './Basic';
+import WithResourceKind from './WithResourceKind';
+import WithCustomText from './WithCustomText';
+
+## EditLabels
+
+EditLabels 是一个编辑标签模态框组件，专门用于编辑 Kubernetes 资源的标签。
+
+### Usage
+
+`EditLabels`
+
+<DemoBlock
+  title="EditLabels 基本用法"
+  description="展示 EditLabels 组件的基本用法，包括标签编辑"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="EditLabels 资源类型"
+  description="展示 EditLabels 组件资源类型的用法"
+>
+  <WithResourceKind />
+</DemoBlock>
+
+<DemoBlock
+  title="EditLabels 自定义文本"
+  description="展示 EditLabels 组件自定义文本的用法"
+>
+  <WithCustomText />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| initialValues | 初始值 | `OriginData` | - |
+| visible | 是否可见 | `boolean` | - |
+| onOk | 确认回调 | `(value: OriginData) => void` | - |
+| onCancel | 取消回调 | `() => void` | - |
+| confirmLoading | 确认按钮加载状态 | `boolean` | - |
+| hideFooter | 隐藏底部 | `boolean` | - |
+| cancelText | 取消按钮文本 | `string` | - |
+| hiddenKeys | 隐藏的键 | `string[]` | - |
+| readOnlyKeys | 只读的键 | `string[]` | - |
+| okText | 确认按钮文本 | `string` | - |
+| resourceKind | 资源类型 | `'Namespace'` | - | 

@@ -1,0 +1,41 @@
+import Basic from './Basic';
+import WithHeader from './WithHeader';
+import WithCustomProps from './WithCustomProps';
+
+## RouterModal
+
+RouterModal 是一个路由模态框组件，用于在模态框中显示路由内容。
+
+### Usage
+
+`RouterModal`
+
+<DemoBlock
+  title="RouterModal 基本用法"
+  description="展示 RouterModal 组件的基本用法，包括路由内容显示"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="RouterModal 自定义头部"
+  description="展示 RouterModal 组件自定义头部的用法"
+>
+  <WithHeader />
+</DemoBlock>
+
+<DemoBlock
+  title="RouterModal 自定义属性"
+  description="展示 RouterModal 组件自定义属性的用法"
+>
+  <WithCustomProps />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| link | 链接地址 | `string` | - |
+| headerTitle | 头部标题 | `ReactNode` | - |
+| headerDescription | 头部描述 | `ReactNode` | - |
+| headerIcon | 头部图标 | `ReactNode` | - | 

@@ -1,0 +1,48 @@
+import Basic from './Basic';
+import WithActions from './WithActions';
+import WithSearch from './WithSearch';
+
+## TableToolbar
+
+TableToolbar 是一个表格工具栏组件，用于提供表格的搜索、筛选和操作功能。
+
+### Usage
+
+`TableToolbar`
+
+<DemoBlock
+  title="TableToolbar 基本用法"
+  description="展示 TableToolbar 组件的基本用法，包括工具栏功能"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="TableToolbar 批量操作"
+  description="展示 TableToolbar 组件批量操作的用法"
+>
+  <WithActions />
+</DemoBlock>
+
+<DemoBlock
+  title="TableToolbar 搜索"
+  description="展示 TableToolbar 组件搜索功能的用法"
+>
+  <WithSearch />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| hideFilters | 隐藏筛选器 | `boolean` | - |
+| hideSettingMenu | 隐藏设置菜单 | `boolean` | - |
+| toolbarLeft | 左侧工具栏 | `ReactNode` | - |
+| toolbarRight | 右侧工具栏 | `ReactNode` | - |
+| batchActions | 批量操作 | `ReactNode` | - |
+| simpleSearch | 简单搜索 | `boolean` | - |
+| instance | 表格实例 | `TableInstance<T>` | - |
+| placeholder | 占位符 | `string` | - |
+| suggestions | 建议 | `Suggestions` | - |
+| onFilterInputChange | 筛选输入变化 | `(value: any) => void` | - |
+| refetch | 重新获取 | `any` | - | 

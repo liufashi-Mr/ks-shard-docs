@@ -1,0 +1,44 @@
+import Basic from './Basic';
+import WithCallback from './WithCallback';
+import WithRef from './WithRef';
+
+## WorkspaceClusterSettingsForm
+
+WorkspaceClusterSettingsForm 是一个工作空间集群设置表单组件，用于配置工作空间的集群设置。
+
+### Usage
+
+`WorkspaceClusterSettingsForm`
+
+<DemoBlock
+  title="WorkspaceClusterSettingsForm 基本用法"
+  description="展示 WorkspaceClusterSettingsForm 组件的基本用法，包括集群设置配置"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="WorkspaceClusterSettingsForm 回调函数"
+  description="展示 WorkspaceClusterSettingsForm 组件回调函数的用法"
+>
+  <WithCallback />
+</DemoBlock>
+
+<DemoBlock
+  title="WorkspaceClusterSettingsForm 引用"
+  description="展示 WorkspaceClusterSettingsForm 组件引用的用法"
+>
+  <WithRef />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| onOk | 确认回调 | `(formValues: WorkspaceClusterSettingsFormValues) => void` | - |
+
+### WorkspaceClusterSettingsFormValues
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| spec.placement.clusters | 集群列表 | `string` | - | 

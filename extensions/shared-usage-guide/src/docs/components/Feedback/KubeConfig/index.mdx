@@ -1,0 +1,33 @@
+import Basic from './Basic';
+import WithCluster from './WithCluster';
+
+## KubeConfig
+
+KubeConfig 是一个 kubeconfig 配置查看模态框组件，用于查看和编辑 kubeconfig 配置。
+
+### Usage
+
+`KubeConfigModal`
+
+<DemoBlock
+  title="KubeConfig 基本用法"
+  description="展示 KubeConfig 组件的基本用法"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="KubeConfig 指定集群"
+  description="展示 KubeConfig 组件指定集群的用法"
+>
+  <WithCluster />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| visible | 是否可见 | `boolean` | - |
+| onCancel | 取消回调 | `() => void` | - |
+| params | 参数配置 | `{ cluster?: string; }` | - |
+| zIndex | 层级 | `number` | - | 

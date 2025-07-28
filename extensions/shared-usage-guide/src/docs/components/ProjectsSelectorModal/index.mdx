@@ -1,0 +1,41 @@
+import Basic from './Basic';
+import WithActions from './WithActions';
+import WithCallback from './WithCallback';
+
+## ProjectsSelectorModal
+
+ProjectsSelectorModal 是一个项目选择器模态框组件，用于选择项目。
+
+### Usage
+
+`ProjectsSelectorModal`
+
+<DemoBlock
+  title="ProjectsSelectorModal 基本用法"
+  description="展示 ProjectsSelectorModal 组件的基本用法，包括项目选择"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="ProjectsSelectorModal 操作权限"
+  description="展示 ProjectsSelectorModal 组件操作权限的用法"
+>
+  <WithActions />
+</DemoBlock>
+
+<DemoBlock
+  title="ProjectsSelectorModal 回调函数"
+  description="展示 ProjectsSelectorModal 组件回调函数的用法"
+>
+  <WithCallback />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| cluster | 集群名称 | `string` | - |
+| workspace | 工作空间 | `string` | - |
+| enableActions | 启用操作 | `Record<string, string[]>` | - |
+| onSelect | 选择回调 | `(url?: string) => void` | - | 

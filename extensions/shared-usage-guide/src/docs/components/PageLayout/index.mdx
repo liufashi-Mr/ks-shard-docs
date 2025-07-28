@@ -1,0 +1,47 @@
+import Basic from './Basic';
+import WithTabs from './WithTabs';
+import WithHeaderRight from './WithHeaderRight';
+
+## PageLayout
+
+PageLayout 是一个页面布局组件，用于提供统一的页面布局结构。
+
+### Usage
+
+`PageLayout`
+
+<DemoBlock
+  title="PageLayout 基本用法"
+  description="展示 PageLayout 组件的基本用法，包括页面布局"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="PageLayout 标签页"
+  description="展示 PageLayout 组件标签页的用法"
+>
+  <WithTabs />
+</DemoBlock>
+
+<DemoBlock
+  title="PageLayout 右侧内容"
+  description="展示 PageLayout 组件右侧内容的用法"
+>
+  <WithHeaderRight />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| title | 页面标题 | `ReactNode` | - |
+| tipsIconProps | 提示图标属性 | `{ tipsText?: string; imgBase64?: string; iconName?: string; maxWidth?: number; }` | - |
+| tabs | 标签页配置 | `PageHeaderTab[]` | - |
+| headerRight | 右侧内容 | `ReactNode` | - |
+| activeTab | 当前激活标签 | `string` | - |
+| type | 标签类型 | `'link' \| 'button'` | - |
+| onTabChange | 标签切换回调 | `(tab: string) => void` | - |
+| wrapperT | 是否包装 T | `boolean` | - |
+| toParent | 是否跳转到父级 | `boolean` | - |
+| padding | 内边距 | `number` | - | 

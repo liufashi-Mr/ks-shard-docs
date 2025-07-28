@@ -1,0 +1,44 @@
+import Basic from './Basic';
+import WithLoading from './WithLoading';
+import WithCustomProps from './WithCustomProps';
+
+## RecreateModal
+
+RecreateModal 是一个重建确认对话框组件，用于确认重建 Kubernetes 资源。
+
+### Usage
+
+`RecreateModal`
+
+<DemoBlock
+  title="RecreateModal 基本用法"
+  description="展示 RecreateModal 组件的基本用法，包括重建确认"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="RecreateModal 加载状态"
+  description="展示 RecreateModal 组件加载状态的用法"
+>
+  <WithLoading />
+</DemoBlock>
+
+<DemoBlock
+  title="RecreateModal 自定义属性"
+  description="展示 RecreateModal 组件自定义属性的用法"
+>
+  <WithCustomProps />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| visible | 是否可见 | `boolean` | - |
+| name | 资源名称 | `string` | - |
+| type | 资源类型 | `string` | - |
+| confirmLoading | 确认按钮加载状态 | `boolean` | - |
+| onOk | 确认回调 | `() => void` | - |
+| onCancel | 取消回调 | `() => void` | - |
+| modalProps | 模态框属性 | `ModalProps` | - | 

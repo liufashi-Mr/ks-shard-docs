@@ -1,0 +1,45 @@
+import Basic from './Basic';
+import WithLoading from './WithLoading';
+import WithCustomText from './WithCustomText';
+
+## EditBaseInfoModal
+
+EditBaseInfoModal 是一个编辑基本信息模态框组件，用于编辑资源的基本信息。
+
+### Usage
+
+`EditBaseInfoModal`
+
+<DemoBlock
+  title="EditBaseInfoModal 基本用法"
+  description="展示 EditBaseInfoModal 组件的基本用法，包括基本信息编辑"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="EditBaseInfoModal 加载状态"
+  description="展示 EditBaseInfoModal 组件加载状态的用法"
+>
+  <WithLoading />
+</DemoBlock>
+
+<DemoBlock
+  title="EditBaseInfoModal 自定义文本"
+  description="展示 EditBaseInfoModal 组件自定义文本的用法"
+>
+  <WithCustomText />
+</DemoBlock>
+
+### API
+
+| 参数           | 说明             | 类型                          | 默认值 |
+| -------------- | ---------------- | ----------------------------- | ------ |
+| initialValues  | 初始值           | `OriginData`                  | -      |
+| visible        | 是否可见         | `boolean`                     | -      |
+| onOk           | 确认回调         | `(value: OriginData) => void` | -      |
+| onCancel       | 取消回调         | `() => void`                  | -      |
+| confirmLoading | 确认按钮加载状态 | `boolean`                     | -      |
+| hideFooter     | 隐藏底部         | `boolean`                     | -      |
+| cancelText     | 取消按钮文本     | `string`                      | -      |
+| okText         | 确认按钮文本     | `string`                      | -      |

@@ -1,0 +1,53 @@
+import Basic from './Basic';
+import WithTabs from './WithTabs';
+import WithSidebar from './WithSidebar';
+
+## DetailPage
+
+DetailPage 是一个详情页面布局组件，用于展示资源的详细信息，支持标签页、侧边栏等功能。
+
+### Usage
+
+`DetailPage`
+
+<DemoBlock
+  title="DetailPage 基本用法"
+  description="展示 DetailPage 组件的基本用法，包括详情页面的基本布局"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock title="DetailPage 带标签页" description="展示 DetailPage 组件带标签页的用法">
+  <WithTabs />
+</DemoBlock>
+
+<DemoBlock title="DetailPage 带侧边栏" description="展示 DetailPage 组件带侧边栏的用法">
+  <WithSidebar />
+</DemoBlock>
+
+### API
+
+| 参数      | 说明             | 类型                                                                          | 默认值 |
+| --------- | ---------------- | ----------------------------------------------------------------------------- | ------ |
+| tabs      | 标签页配置       | `Tab[]`                                                                       | -      |
+| nav       | 导航内容         | `ReactNode`                                                                   | -      |
+| activeTab | 当前激活的标签页  | `string`                                                                      | -      |
+| sideProps | 侧边栏属性       | `SideBarProps<T>`                                                             | -      |
+| store     | 数据存储         | `any`                                                                         | -      |
+| data      | 详情数据         | `T`                                                                           | -      |
+| params    | 路径参数         | `PathParams`                                                                  | -      |
+| isLoading | 加载状态         | `boolean`                                                                     | -      |
+| authKey   | 权限键           | `string`                                                                      | -      |
+| className | 自定义类名       | `string`                                                                      | -      |
+| padding   | 内边距           | `number`                                                                      | -      |
+| replica   | 副本信息         | `ReactNode \| ((detail: T) => ReactNode)`                                     | -      |
+| customNav | 自定义导航       | `(props: { tabs?: Tab[], nav?: ReactNode, activeTab?: string }) => ReactNode` | -      |
+
+### Tab 配置
+
+| 参数      | 说明       | 类型        | 默认值 |
+| --------- | ---------- | ----------- | ------ |
+| name      | 标签页名称 | `string`    | -      |
+| title     | 标签页标题 | `string`    | -      |
+| component | 标签页组件 | `ReactNode` | -      |
+| authKey   | 权限键     | `string`    | -      |

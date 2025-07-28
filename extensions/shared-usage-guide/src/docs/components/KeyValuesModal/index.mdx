@@ -1,0 +1,49 @@
+import Basic from './Basic';
+import WithHiddenKeys from './WithHiddenKeys';
+import WithReadOnlyKeys from './WithReadOnlyKeys';
+
+## KeyValuesModal
+
+KeyValuesModal 是一个键值对编辑模态框组件，用于编辑标签和注解等键值对数据。
+
+### Usage
+
+`KeyValuesModal`
+
+<DemoBlock
+  title="KeyValuesModal 基本用法"
+  description="展示 KeyValuesModal 组件的基本用法，包括键值对编辑"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="KeyValuesModal 隐藏键"
+  description="展示 KeyValuesModal 组件隐藏键的用法"
+>
+  <WithHiddenKeys />
+</DemoBlock>
+
+<DemoBlock
+  title="KeyValuesModal 只读键"
+  description="展示 KeyValuesModal 组件只读键的用法"
+>
+  <WithReadOnlyKeys />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| title | 标题 | `string` | - |
+| fieldName | 字段名 | `FormItemProps['name']` | - |
+| initialValues | 初始值 | `OriginData` | - |
+| visible | 是否可见 | `boolean` | - |
+| onOk | 确认回调 | `(value: OriginData) => void` | - |
+| onCancel | 取消回调 | `() => void` | - |
+| confirmLoading | 确认按钮加载状态 | `boolean` | - |
+| hideFooter | 隐藏底部 | `boolean` | - |
+| cancelText | 取消按钮文本 | `string` | - |
+| hiddenKeys | 隐藏的键 | `string[]` | - |
+| readOnlyKeys | 只读的键 | `string[]` | - |
+| okText | 确认按钮文本 | `string` | - | 

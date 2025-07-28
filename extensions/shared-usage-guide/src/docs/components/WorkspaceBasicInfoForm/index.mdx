@@ -1,0 +1,41 @@
+import Basic from './Basic';
+import WithInitialValues from './WithInitialValues';
+import WithManager from './WithManager';
+
+## WorkspaceBasicInfoForm
+
+WorkspaceBasicInfoForm 是一个工作空间基本信息表单组件，用于编辑工作空间的基本信息。
+
+### Usage
+
+`WorkspaceBasicInfoForm`
+
+<DemoBlock
+  title="WorkspaceBasicInfoForm 基本用法"
+  description="展示 WorkspaceBasicInfoForm 组件的基本用法，包括基本信息编辑"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="WorkspaceBasicInfoForm 初始值"
+  description="展示 WorkspaceBasicInfoForm 组件初始值的用法"
+>
+  <WithInitialValues />
+</DemoBlock>
+
+<DemoBlock
+  title="WorkspaceBasicInfoForm 管理员"
+  description="展示 WorkspaceBasicInfoForm 组件管理员的用法"
+>
+  <WithManager />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| initialValues | 初始值 | `OriginalWorkspace` | - |
+| isHideManagerFiled | 是否隐藏管理员字段 | `boolean` | - |
+| manager | 管理员 | `string` | - |
+| onOk | 确认回调 | `(value: WorkspaceFormValues) => void` | - | 

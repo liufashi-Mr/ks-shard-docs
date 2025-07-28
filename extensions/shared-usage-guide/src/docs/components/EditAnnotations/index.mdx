@@ -1,0 +1,47 @@
+import Basic from './Basic';
+import WithHiddenKeys from './WithHiddenKeys';
+import WithCustomText from './WithCustomText';
+
+## EditAnnotations
+
+EditAnnotations 是一个编辑注解模态框组件，专门用于编辑 Kubernetes 资源的注解。
+
+### Usage
+
+`EditAnnotations`
+
+<DemoBlock
+  title="EditAnnotations 基本用法"
+  description="展示 EditAnnotations 组件的基本用法，包括注解编辑"
+>
+  <Basic />
+</DemoBlock>
+
+<DemoBlock
+  title="EditAnnotations 隐藏键"
+  description="展示 EditAnnotations 组件隐藏键的用法"
+>
+  <WithHiddenKeys />
+</DemoBlock>
+
+<DemoBlock
+  title="EditAnnotations 自定义文本"
+  description="展示 EditAnnotations 组件自定义文本的用法"
+>
+  <WithCustomText />
+</DemoBlock>
+
+### API
+
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| initialValues | 初始值 | `OriginData` | - |
+| visible | 是否可见 | `boolean` | - |
+| onOk | 确认回调 | `(value: OriginData) => void` | - |
+| onCancel | 取消回调 | `() => void` | - |
+| confirmLoading | 确认按钮加载状态 | `boolean` | - |
+| hideFooter | 隐藏底部 | `boolean` | - |
+| cancelText | 取消按钮文本 | `string` | - |
+| hiddenKeys | 隐藏的键 | `string[]` | - |
+| readOnlyKeys | 只读的键 | `string[]` | - |
+| okText | 确认按钮文本 | `string` | - | 
