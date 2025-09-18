@@ -1525,7 +1525,7 @@
     react-file-reader "^1.1.4"
     styled-components "^5.3.0"
 
-"@kubed/components@^0.2.13":
+"@kubed/components@^0.2.26":
   version "0.2.33"
   resolved "https://registry.yarnpkg.com/@kubed/components/-/components-0.2.33.tgz#8006d94a85ae08f0558eb1d381e4989bf0d81339"
   integrity sha512-yT/A68lU30RAhNYLpb5vx0k75yp7koKfpkIb5R9qyKZj1FhBSI/onR1y0Vtl+eZS4/08y4enNU7ILzx9ch062A==
@@ -1642,10 +1642,10 @@
     unist-util-visit "^5.0.0"
     vfile "^6.0.0"
 
-"@mdx-js/react@^3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-3.1.0.tgz#c4522e335b3897b9a845db1dbdd2f966ae8fb0ed"
-  integrity sha512-QjHtSaoameoalGnKDT3FoIl4+9RwyTmo9ZJGBdLOks/YOiWHoRDI3PUwEzOE7kEmGcV3AFcp9K6dYu9rEuKLAQ==
+"@mdx-js/react@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-3.1.1.tgz#24bda7fffceb2fe256f954482123cda1be5f5fef"
+  integrity sha512-f++rKLQgUVYDAtECQ6fn/is15GkEH9+nZPM3MS0RcxVqoTfawHvDlSCH7JbMhAM6uJ32v3eXLvLmLvjGu7PTQw==
   dependencies:
     "@types/mdx" "^2.0.0"
 

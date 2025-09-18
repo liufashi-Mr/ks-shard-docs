@@ -216,6 +216,17 @@ const componentNavs: IConfigItem[] = [
       },
     ],
   },
+  {
+    name: 'others',
+    title: '其他',
+    children: [
+      {
+        name: 'store',
+        path: 'components/Others/Store',
+        title: 'Store 存储',
+      },
+    ],
+  },
 ];
 
 const hookNavs: IConfigItem[] = [];
