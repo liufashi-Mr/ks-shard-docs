@@ -86,24 +86,6 @@ const MdxContainer = styled.div`
     color: #6a737d;
     margin: 24px 0;
   }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 24px;
-  }
-
-  th,
-  td {
-    border: 1px solid #dfe2e5;
-    padding: 10px 16px;
-    text-align: left;
-  }
-
-  th {
-    background-color: #f6f8fa;
-    font-weight: 600;
-  }
 `;
 
 export default MdxContainer;

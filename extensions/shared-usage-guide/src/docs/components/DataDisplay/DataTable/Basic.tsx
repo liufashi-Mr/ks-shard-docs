@@ -1,47 +1,136 @@
 import React from 'react';
-import { DataTable, StatusIndicator } from '@ks-console/shared';
+import { Card, DataTable, Button } from '@kubed/components';
+import { ColumnDef } from '@tanstack/react-table';
+import store from './store';
+import { StatusIndicator } from '@ks-console/shared';
+
+interface MockData {
+  id: string;
+  name: string;
+  email: string;
+  phone: string;
+  department: string;
+  position: string;
+  status: string;
+  createTime: string;
+  updateTime: string;
+}
 
 export default function Basic() {
-  const columns = [
+  const { data, isLoading, refetch } = store.useQueryList(
+    {},
     {
-      title: '名称',
-      field: 'name',
-      searchable: true,
+      enabled: true,
     },
-    {
-      title: '状态',
-      field: 'status',
-      render: (value: any) => <StatusIndicator type={String(value).toLowerCase() as any} />,
+  );
+
+  const columns: ColumnDef<MockData, any>[] = React.useMemo(() => {
+    return [
+      {
+        accessorKey: 'name',
+        header: '名称',
+        meta: {
+          th: {
+            width: 150,
+          },
+        },
+      },
+      {
+        accessorKey: 'status',
+        header: '状态',
+        meta: {
+          sortable: true,
+          th: {
+            width: 200,
+          },
+        },
+        cell: ({ getValue }) => {
+          const status = getValue();
+          return <StatusIndicator type={status}>{t(status.toUpperCase())}</StatusIndicator>;
+        },
+      },
+      {
+        accessorKey: 'namespace',
+        header: '项目',
+        meta: {
+          th: {
+            width: 150,
+          },
+        },
+      },
+      {
+        accessorKey: 'age',
+        header: '时长',
+        meta: {
+          sortable: true,
+          th: {
+            width: 120,
+          },
+        },
+      },
+      {
+        accessorKey: 'ready',
+        header: '实例',
+        meta: {
+          sortable: true,
+          th: {
+            width: 120,
+          },
+        },
+      },
+      {
+        accessorKey: 'restarts',
+        header: '重启次数',
+        meta: {
+          sortable: true,
+          th: {
+            width: 100,
+          },
+        },
+      },
+    ];
+  }, []);
+
+  const baseConfig = React.useState(() =>
+    DataTable.getDefaultTableOptions<MockData>({
+      tableName: 'basic-data-table',
+      manual: true,
+      enableVisible: true,
+      enableSelection: false,
+    }),
+  )[0];
+
+  const table = DataTable.useTable<MockData>({
+    ...baseConfig,
+    columns,
+    loading: isLoading,
+    data: data?.data ?? [],
+    rowCount: data?.total ?? 0,
+    getRowId: React.useCallback(row => row.id, []),
+    meta: {
+      ...baseConfig.meta,
+      refetch: () => {
+        refetch();
+      },
+      getProps: {
+        table: () => {
+          return {
+            stickyHeader: true,
+            tableWrapperClassName: 'table',
+          };
+        },
+        toolbar: () => {
+          return {
+            toolbarLeft: <Button onClick={() => refetch()}>刷新数据</Button>,
+          };
+        },
+      },
     },
-    {
-      title: '命名空间',
-      field: 'namespace',
-      canHide: true,
-    },
-    {
-      title: '运行时间',
-      field: 'age',
-      canHide: true,
-    },
-    {
-      title: '就绪状态',
-      field: 'ready',
-      canHide: true,
-    },
-    {
-      title: '重启次数',
-      field: 'restarts',
-      canHide: true,
-    },
-  ];
+  });
 
   return (
-    <DataTable
-      columns={columns}
-      useStorageState
-      url="https://m1.apifoxmock.com/m1/6723821-6434759-default/mock-data"
-      tableName="pods-table"
-      rowKey="id"
-    />
+    <Card padding={0}>
+      <DataTable.DataTable table={table} />
+    </Card>
   );
 }

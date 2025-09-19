@@ -1,10 +1,12 @@
 import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
 import DemoBlock from './DemoBlock';
+import Table from './Table';
 
 // 定义全局组件
 const components = {
   DemoBlock,
+  table: Table,
 };
 
 interface CustomMDXProviderProps {
@@ -12,11 +14,7 @@ interface CustomMDXProviderProps {
 }
 
 const CustomMDXProvider: React.FC<CustomMDXProviderProps> = ({ children }) => {
-  return (
-    <MDXProvider components={components}>
-      {children}
-    </MDXProvider>
-  );
+  return <MDXProvider components={components}>{children}</MDXProvider>;
 };
 
-export default CustomMDXProvider; 
+export default CustomMDXProvider;
